@@ -37,12 +37,12 @@ class SafariViewController: UIViewController {
         }
     }
     
-    private var safariViewController: SFSafariViewController?
-    private var currentURL: URL?
-    private var tintColor: UIColor?
-    private var barTintColor: UIColor?
-    private var safariConfiguration: SFSafariViewController.Configuration?
-    private var handler: (() -> ())?
+    fileprivate var safariViewController: SFSafariViewController?
+    fileprivate var tintColor: UIColor?
+    fileprivate var currentURL: URL?
+    fileprivate var barTintColor: UIColor?
+    fileprivate var safariConfiguration: SFSafariViewController.Configuration?
+    fileprivate var handler: (() -> ())?
     
     init(tintColor: UIColor, barTintColor: UIColor, url: URL) {
         super.init(nibName: nil, bundle: nil)
@@ -69,10 +69,10 @@ class SafariViewController: UIViewController {
     
     private func setTintColor() {
         if #available(iOS 10.0, *) {
-            safariViewController?.preferredBarTintColor = tintColor
-            safariViewController?.preferredControlTintColor = barTintColor
+            safariViewController?.preferredBarTintColor = tintColor!
+            safariViewController?.preferredControlTintColor = barTintColor!
         } else {
-            safariViewController?.view.tintColor = tintColor
+            safariViewController?.view.tintColor = tintColor!
         }
     }
 }
