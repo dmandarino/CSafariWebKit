@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SafariViewControllerProtocol {
+public protocol SafariViewControllerProtocol {
     var entersReaderIfAvailable: Bool { get set }
     var barCollapsingEnabled: Bool { get set }
     var dismissButtonStyle: DismissButtonStyle { get set }

@@ -9,27 +9,27 @@
 import UIKit
 import SafariServices
 
-class SafariViewController: UIViewController {
+public class SafariViewController: UIViewController {
     
-    var entersReaderIfAvailable: Bool = false {
+    public var entersReaderIfAvailable: Bool = false {
         didSet {
             self.safariConfiguration?.entersReaderIfAvailable = entersReaderIfAvailable
         }
     }
     
-    var barCollapsingEnabled: Bool = false {
+    public var barCollapsingEnabled: Bool = false {
         didSet {
             self.safariConfiguration?.barCollapsingEnabled = barCollapsingEnabled
         }
     }
     
-    var dismissButtonStyle: DismissButtonStyle = DismissButtonStyle.close {
+    public var dismissButtonStyle: DismissButtonStyle = DismissButtonStyle.close {
         didSet {
             self.safariViewController?.dismissButtonStyle = dismissButtonStyle.getStyle()
         }
     }
     
-    var presentModally: Bool = false {
+    public var presentModally: Bool = false {
         didSet {
             if presentModally {
                 safariViewController?.modalPresentationStyle = UIModalPresentationStyle.popover
@@ -52,7 +52,7 @@ class SafariViewController: UIViewController {
         setupSafariViewController()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -79,7 +79,7 @@ class SafariViewController: UIViewController {
 
 extension SafariViewController: SafariViewControllerProtocol {
     
-    func configureToBePresented(currentViewController: UIViewController, didFinish handler: @escaping () -> Void) {
+    public func configureToBePresented(currentViewController: UIViewController, didFinish handler: @escaping () -> Void) {
         guard let viewController = safariViewController else {
             NSLog("Error: SafariViewController has not been initialized properly.")
             return
@@ -91,7 +91,7 @@ extension SafariViewController: SafariViewControllerProtocol {
 
 extension SafariViewController: SFSafariViewControllerDelegate {
     
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+    public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         guard let completion = handler else {
             return
         }

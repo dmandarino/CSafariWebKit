@@ -8,13 +8,13 @@
 
 import SafariServices
 
-enum DismissButtonStyle {
+public enum DismissButtonStyle {
     
     case cancel
     case close
     case done
     
-    func getStyle() -> SFSafariViewController.DismissButtonStyle {
+    public func getStyle() -> SFSafariViewController.DismissButtonStyle {
         switch self {
         case .cancel:
             return SFSafariViewController.DismissButtonStyle.cancel
