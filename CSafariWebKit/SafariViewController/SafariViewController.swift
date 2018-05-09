@@ -23,7 +23,7 @@ public class SafariViewController: UIViewController {
         }
     }
     
-    public var dismissButtonStyle: DismissButtonStyle = DismissButtonStyle.close {
+    public var dismissButtonStyle: DismissButtonStyle = DismissButtonStyle.done {
         didSet {
             self.safariViewController?.dismissButtonStyle = dismissButtonStyle.getStyle()
         }
@@ -32,7 +32,7 @@ public class SafariViewController: UIViewController {
     public var presentModally: Bool = false {
         didSet {
             if presentModally {
-                safariViewController?.modalPresentationStyle = UIModalPresentationStyle.popover
+                self.safariViewController?.modalPresentationStyle = UIModalPresentationStyle.popover
             }
         }
     }
@@ -44,7 +44,7 @@ public class SafariViewController: UIViewController {
     fileprivate var safariConfiguration: SFSafariViewController.Configuration?
     fileprivate var handler: (() -> ())?
     
-    init(tintColor: UIColor, barTintColor: UIColor, url: URL) {
+    public init(url: URL, barTintColor: UIColor?, tintColor: UIColor?) {
         super.init(nibName: nil, bundle: nil)
         self.currentURL = url
         self.tintColor = tintColor
@@ -64,28 +64,25 @@ public class SafariViewController: UIViewController {
         safariConfiguration = SFSafariViewController.Configuration()
         safariViewController = SFSafariViewController(url: url, configuration: safariConfiguration!)
         safariViewController?.delegate = self
-        setTintColor()
+        setColors()
     }
     
-    private func setTintColor() {
-        if #available(iOS 10.0, *) {
-            safariViewController?.preferredBarTintColor = tintColor!
-            safariViewController?.preferredControlTintColor = barTintColor!
-        } else {
-            safariViewController?.view.tintColor = tintColor!
+    private func setColors() {
+        if let bar = barTintColor {
+            safariViewController?.preferredBarTintColor = bar
+        }
+        if let tint = tintColor {
+            safariViewController?.preferredControlTintColor = tint
         }
     }
 }
 
 extension SafariViewController: SafariViewControllerProtocol {
     
-    public func configureToBePresented(currentViewController: UIViewController, didFinish handler: @escaping () -> Void) {
-        guard let viewController = safariViewController else {
-            NSLog("Error: SafariViewController has not been initialized properly.")
-            return
-        }
+    public func presentSafari(fromViewController previousViewController: UIViewController, whenDidFinish handler: (() -> Void)?) {
         self.handler = handler
-        currentViewController.present(viewController, animated: true, completion: nil)
+        previousViewController.present(safariViewController!, animated: true, completion: nil)
+        previousViewController.present(self, animated: true, completion: nil)
     }
 }
 

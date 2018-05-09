@@ -14,5 +14,5 @@ public protocol SafariViewControllerProtocol {
     var dismissButtonStyle: DismissButtonStyle { get set }
     var presentModally: Bool { get set }
     
-    func configureToBePresented(currentViewController: UIViewController, didFinish handler: @escaping () -> Void)
+    func presentSafari(fromViewController previousViewController: UIViewController, whenDidFinish handler: (() -> Void)?)
 }
