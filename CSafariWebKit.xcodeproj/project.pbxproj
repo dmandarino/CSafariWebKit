@@ -14,8 +14,6 @@
 		5A6F80C0209C26E9006BE795 /* CSafariWebKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A6F80B2209C26E9006BE795 /* CSafariWebKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A6F80CB209C29EE006BE795 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80CA209C29EE006BE795 /* SafariViewController.swift */; };
 		5A6F80CC209C29EE006BE795 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80CA209C29EE006BE795 /* SafariViewController.swift */; };
-		5A6F80CE209C2A30006BE795 /* SafariViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80CD209C2A30006BE795 /* SafariViewControllerProtocol.swift */; };
-		5A6F80CF209C2A30006BE795 /* SafariViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80CD209C2A30006BE795 /* SafariViewControllerProtocol.swift */; };
 		5A6F80D1209C2A62006BE795 /* DismissButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80D0209C2A62006BE795 /* DismissButtonStyle.swift */; };
 		5A6F80D2209C2A62006BE795 /* DismissButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80D0209C2A62006BE795 /* DismissButtonStyle.swift */; };
 		B9ED937048490DEEAE9F7722 /* Pods_CSafariWebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE4E8FE04E76E6B08726012 /* Pods_CSafariWebKit.framework */; };
@@ -42,7 +40,6 @@
 		5A6F80BD209C26E9006BE795 /* CSafariWebKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSafariWebKitTests.swift; sourceTree = "<group>"; };
 		5A6F80BF209C26E9006BE795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6F80CA209C29EE006BE795 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
-		5A6F80CD209C2A30006BE795 /* SafariViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewControllerProtocol.swift; sourceTree = "<group>"; };
 		5A6F80D0209C2A62006BE795 /* DismissButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButtonStyle.swift; sourceTree = "<group>"; };
 		7E56787FD79FE7F31B73B362 /* Pods-CSafariWebKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKitTests/Pods-CSafariWebKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		AA4E62A0AF398FCBA693A378 /* Pods-CSafariWebKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKit/Pods-CSafariWebKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				5A6F80CA209C29EE006BE795 /* SafariViewController.swift */,
-				5A6F80CD209C2A30006BE795 /* SafariViewControllerProtocol.swift */,
 				5A6F80D0209C2A62006BE795 /* DismissButtonStyle.swift */,
 				5A4C77DA20A559D7009107EF /* SafariConfiguration.swift */,
 			);
@@ -292,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6F80D1209C2A62006BE795 /* DismissButtonStyle.swift in Sources */,
-				5A6F80CE209C2A30006BE795 /* SafariViewControllerProtocol.swift in Sources */,
 				5A4C77DB20A559D7009107EF /* SafariConfiguration.swift in Sources */,
 				5A6F80CB209C29EE006BE795 /* SafariViewController.swift in Sources */,
 			);
@@ -303,7 +298,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6F80D2209C2A62006BE795 /* DismissButtonStyle.swift in Sources */,
-				5A6F80CF209C2A30006BE795 /* SafariViewControllerProtocol.swift in Sources */,
 				5A6F80CC209C29EE006BE795 /* SafariViewController.swift in Sources */,
 				5A6F80BE209C26E9006BE795 /* CSafariWebKitTests.swift in Sources */,
 			);

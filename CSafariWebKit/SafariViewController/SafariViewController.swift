@@ -11,6 +11,12 @@ import SafariServices
 
 public class SafariViewController: UIViewController {
     
+    /**
+     Indicates if SafariViewController should automatically show the Reader version of web pages. This will only happen when Safari Reader is available on a web page.
+     
+     -Important:
+     Only works for iOS 11.0 and higher.
+     */
     public var entersReaderIfAvailable: Bool = false {
         didSet {
             if #available(iOS 11.0, *) {
@@ -19,6 +25,12 @@ public class SafariViewController: UIViewController {
         }
     }
     
+    /**
+     Should enable collapsing of the navigation bar and hiding of the bottom toolbar when the user scrolls web content.
+     
+     -Important:
+     Only works for iOS 11.0 and higher.
+     */
     public var barCollapsingEnabled: Bool = false {
         didSet {
             if #available(iOS 11.0, *) {
@@ -27,6 +39,12 @@ public class SafariViewController: UIViewController {
         }
     }
     
+    /**
+     Indicates wich button should be shown in SafariViewController to close it. You can choose between "Close", "Done" and "Cancel".
+     
+     -Important:
+     Only works for iOS 11.0 and higher.
+     */
     public var dismissButtonStyle: DismissButtonStyle = DismissButtonStyle.done {
         didSet {
             if #available(iOS 11.0, *) {
@@ -35,6 +53,9 @@ public class SafariViewController: UIViewController {
         }
     }
     
+    /**
+     Indicates that SafariViewController should be presented modally.
+     */
     public var presentModally: Bool = false {
         didSet {
             if presentModally {
@@ -92,8 +113,15 @@ public class SafariViewController: UIViewController {
     }
 }
 
-extension SafariViewController: SafariViewControllerProtocol {
+extension SafariViewController {
     
+    /**
+     Present SafariViewController from the previous ViewController.
+     
+     - Parameters:
+     - previousViewController: The ViewController that will present the Browser.
+     - handler: A method used as a callback when the user closes the Browser.
+     */
     public func presentSafari(fromViewController previousViewController: UIViewController, whenDidFinish handler: (() -> Void)?) {
         self.handler = handler
         previousViewController.present(safariViewController!, animated: true, completion: nil)
