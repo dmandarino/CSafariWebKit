@@ -13,19 +13,25 @@ public class SafariViewController: UIViewController {
     
     public var entersReaderIfAvailable: Bool = false {
         didSet {
-            self.safariConfiguration?.entersReaderIfAvailable = entersReaderIfAvailable
+            if #available(iOS 11.0, *) {
+                SafariConfiguration.entersReaderIfAvailable = entersReaderIfAvailable
+            }
         }
     }
     
     public var barCollapsingEnabled: Bool = false {
         didSet {
-            self.safariConfiguration?.barCollapsingEnabled = barCollapsingEnabled
+            if #available(iOS 11.0, *) {
+                SafariConfiguration.barCollapsingEnabled = barCollapsingEnabled
+            }
         }
     }
     
     public var dismissButtonStyle: DismissButtonStyle = DismissButtonStyle.done {
         didSet {
-            self.safariViewController?.dismissButtonStyle = dismissButtonStyle.getStyle()
+            if #available(iOS 11.0, *) {
+                self.safariViewController?.dismissButtonStyle = dismissButtonStyle.getStyle()
+            }
         }
     }
     
@@ -37,12 +43,11 @@ public class SafariViewController: UIViewController {
         }
     }
     
-    fileprivate var safariViewController: SFSafariViewController?
-    fileprivate var tintColor: UIColor?
-    fileprivate var currentURL: URL?
-    fileprivate var barTintColor: UIColor?
-    fileprivate var safariConfiguration: SFSafariViewController.Configuration?
-    fileprivate var handler: (() -> ())?
+    private var safariViewController: SFSafariViewController?
+    private var tintColor: UIColor?
+    private var currentURL: URL?
+    private var barTintColor: UIColor?
+    private var handler: (() -> ())?
     
     public init(url: URL, barTintColor: UIColor?, tintColor: UIColor?) {
         super.init(nibName: nil, bundle: nil)
@@ -61,18 +66,28 @@ public class SafariViewController: UIViewController {
             NSLog("Error: URL Bad Format.")
             return
         }
-        safariConfiguration = SFSafariViewController.Configuration()
-        safariViewController = SFSafariViewController(url: url, configuration: safariConfiguration!)
+        if #available(iOS 11.0, *) {
+            let safariConfiguration = SafariConfiguration.configuration
+            safariViewController = SFSafariViewController(url: url, configuration: safariConfiguration!)
+        } else {
+            safariViewController = SFSafariViewController(url: url)
+        }
         safariViewController?.delegate = self
         setColors()
     }
     
     private func setColors() {
         if let bar = barTintColor {
-            safariViewController?.preferredBarTintColor = bar
+            if #available(iOS 10.0, *) {
+                safariViewController?.preferredBarTintColor = bar
+            } else {
+                safariViewController?.view.tintColor = bar
+            }
         }
         if let tint = tintColor {
-            safariViewController?.preferredControlTintColor = tint
+            if #available(iOS 10.0, *) {
+                safariViewController?.preferredControlTintColor = tint
+            }
         }
     }
 }
@@ -95,3 +110,4 @@ extension SafariViewController: SFSafariViewControllerDelegate {
         completion()
     }
 }
+

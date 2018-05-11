@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		558F212EC248FE8A83C29E3E /* Pods_CSafariWebKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1851F5870B1F3CB4FC48543B /* Pods_CSafariWebKitTests.framework */; };
+		5A4C77DB20A559D7009107EF /* SafariConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4C77DA20A559D7009107EF /* SafariConfiguration.swift */; };
 		5A6F80B9209C26E9006BE795 /* CSafariWebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6F80AF209C26E9006BE795 /* CSafariWebKit.framework */; };
 		5A6F80BE209C26E9006BE795 /* CSafariWebKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80BD209C26E9006BE795 /* CSafariWebKitTests.swift */; };
 		5A6F80C0209C26E9006BE795 /* CSafariWebKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A6F80B2209C26E9006BE795 /* CSafariWebKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		1851F5870B1F3CB4FC48543B /* Pods_CSafariWebKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSafariWebKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		485DAD90EAD30046373D9773 /* Pods-CSafariWebKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKit/Pods-CSafariWebKit.debug.xcconfig"; sourceTree = "<group>"; };
+		5A4C77DA20A559D7009107EF /* SafariConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariConfiguration.swift; sourceTree = "<group>"; };
 		5A6F80AF209C26E9006BE795 /* CSafariWebKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSafariWebKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6F80B2209C26E9006BE795 /* CSafariWebKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSafariWebKit.h; sourceTree = "<group>"; };
 		5A6F80B3209C26E9006BE795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				5A6F80CA209C29EE006BE795 /* SafariViewController.swift */,
 				5A6F80CD209C2A30006BE795 /* SafariViewControllerProtocol.swift */,
 				5A6F80D0209C2A62006BE795 /* DismissButtonStyle.swift */,
+				5A4C77DA20A559D7009107EF /* SafariConfiguration.swift */,
 			);
 			path = SafariViewController;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			files = (
 				5A6F80D1209C2A62006BE795 /* DismissButtonStyle.swift in Sources */,
 				5A6F80CE209C2A30006BE795 /* SafariViewControllerProtocol.swift in Sources */,
+				5A4C77DB20A559D7009107EF /* SafariConfiguration.swift in Sources */,
 				5A6F80CB209C29EE006BE795 /* SafariViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,7 +454,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CSafariWebKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,7 +483,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CSafariWebKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
