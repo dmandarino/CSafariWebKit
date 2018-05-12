@@ -64,11 +64,11 @@ public class SafariViewController: UIViewController {
         }
     }
     
-    private var safariViewController: SFSafariViewController?
-    private var tintColor: UIColor?
-    private var currentURL: URL?
-    private var barTintColor: UIColor?
-    private var handler: (() -> ())?
+    fileprivate var safariViewController: SFSafariViewController?
+    fileprivate var tintColor: UIColor?
+    fileprivate var currentURL: URL?
+    fileprivate var barTintColor: UIColor?
+    fileprivate var handler: (() -> ())?
     
     public init(url: URL, barTintColor: UIColor?, tintColor: UIColor?) {
         super.init(nibName: nil, bundle: nil)
