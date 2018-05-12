@@ -1,6 +1,0 @@
-framework module Pods_CSafariWebKitTests {
-  umbrella header "Pods-CSafariWebKitTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
