@@ -33,9 +33,9 @@ Your app's target should be at least iOS 9.0. And if you are not cloning it, the
 You can either clone it and add it as a Framework or you can use it as a dependency from [CocoaPods](https://cocoapods.org/)
 
 
-#### Git Clone
+#### Framework
 
-Clone this project and got to Xcode and follow these steps.
+Clone this project, copy CSafariWebKit.framework to your project. Then and go to Xcode and follow these steps.
 
 1. Select the project file from the project navigator on the left side of the project window.
 2. Select the target for where you want to add frameworks in the project settings editor.
