@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name         = 'CSafariWebKit'
-    spec.version      = '0.1.4'
+    spec.version      = '0.1.6'
     spec.ios.deployment_target  = '9.0'
     spec.license      = { :type => 'MIT' }
     spec.homepage     = 'https://github.com/dmandarino/CSafariWebKit'
