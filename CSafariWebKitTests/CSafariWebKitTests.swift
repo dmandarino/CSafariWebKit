@@ -7,30 +7,48 @@
 //
 
 import XCTest
+import SafariServices
 @testable import CSafariWebKit
 
 class CSafariWebKitTests: XCTestCase {
     
+    var expect: XCTestExpectation!
+    var urlToTest: URL!
+    var sut: SafariViewController!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        guard let url = URL(string: "https://github.com/dmandarino/CSafariWebKit") else {
+            XCTFail()
+            return
+        }
+        urlToTest = url
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testToGuaranteeDefaultValues() {
+        sut = SafariViewController(url: urlToTest, barTintColor: nil, tintColor: nil)
+        XCTAssertEqual(sut.barCollapsingEnabled, false)
+        XCTAssertEqual(sut.entersReaderIfAvailable, false)
+        XCTAssertEqual(sut.presentModally, false)
+        XCTAssertEqual(sut.dismissButtonStyle, .done)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testCallBackWhenDidFinish() {
+        let vc = UIViewController(nibName: nil, bundle: nil)
+        let sfSafariVC = SFSafariViewController(url: urlToTest)
+        sut = SafariViewController(url: urlToTest, barTintColor: nil, tintColor: nil,
+                                   safariViewControllerMock: sfSafariVC)
+        expect = expectation(description: "Callback when did finish SafariViewController")
+        sut.presentSafari(fromViewController: vc, whenDidFinish: callbackFunction)
+        sut.safariViewControllerDidFinish(sfSafariVC)
+        wait(for: [expect], timeout: 2.0)
     }
     
+    private func callbackFunction() {
+        expect?.fulfill()
+    }
 }

@@ -72,14 +72,22 @@ public class SafariViewController: UIViewController {
         self.currentURL = url
         self.tintColor = tintColor
         self.barTintColor = barTintColor
-        setupSafariViewController()
+        createSafariViewController()
+        configureSafariViewController()
+    }
+    
+    internal convenience init(url: URL, barTintColor: UIColor?, tintColor: UIColor?,
+                     safariViewControllerMock: SFSafariViewController) {
+        self.init(url: url, barTintColor: barTintColor, tintColor: tintColor)
+        self.safariViewController = safariViewControllerMock
+        configureSafariViewController()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupSafariViewController() {
+    private func createSafariViewController() {
         guard let url = currentURL else {
             NSLog("Error: URL Bad Format.")
             return
@@ -90,6 +98,9 @@ public class SafariViewController: UIViewController {
         } else {
             safariViewController = SFSafariViewController(url: url)
         }
+    }
+    
+    private func configureSafariViewController() {
         safariViewController?.delegate = self
         setColors()
     }
