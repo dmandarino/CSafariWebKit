@@ -1,0 +1,11 @@
+framework module CSafariWebKit {
+  umbrella header "CSafariWebKit.h"
+
+  export *
+  module * { export * }
+}
+
+module CSafariWebKit.Swift {
+    header "CSafariWebKit-Swift.h"
+    requires objc
+}
