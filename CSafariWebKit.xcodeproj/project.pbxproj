@@ -160,7 +160,6 @@
 				5A6F80AB209C26E9006BE795 /* Frameworks */,
 				5A6F80AC209C26E9006BE795 /* Headers */,
 				5A6F80AD209C26E9006BE795 /* Resources */,
-				36317C3AFE27F508470F2EF4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,8 +178,6 @@
 				5A6F80B4209C26E9006BE795 /* Sources */,
 				5A6F80B5209C26E9006BE795 /* Frameworks */,
 				5A6F80B6209C26E9006BE795 /* Resources */,
-				BB7E3AF67ABB41432F999C5C /* [CP] Embed Pods Frameworks */,
-				3056FB406B0748016BDD6CED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,36 +244,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3056FB406B0748016BDD6CED /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSafariWebKitTests/Pods-CSafariWebKitTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		36317C3AFE27F508470F2EF4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSafariWebKit/Pods-CSafariWebKit-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4AFF1066EBA18957C3C75320 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,21 +278,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BB7E3AF67ABB41432F999C5C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSafariWebKitTests/Pods-CSafariWebKitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

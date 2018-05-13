@@ -14,8 +14,7 @@ public class SafariViewController: UIViewController {
     /**
      Indicates if SafariViewController should automatically show the Reader version of web pages. This will only happen when Safari Reader is available on a web page.
      
-     -Important:
-     Only works for iOS 11.0 and higher.
+     - Attention: Only apply for SDK: iOS 11.0+
      */
     public var entersReaderIfAvailable: Bool = false {
         didSet {
@@ -28,8 +27,7 @@ public class SafariViewController: UIViewController {
     /**
      Should enable collapsing of the navigation bar and hiding of the bottom toolbar when the user scrolls web content.
      
-     -Important:
-     Only works for iOS 11.0 and higher.
+     - Attention: Only apply for SDK: iOS 11.0+
      */
     public var barCollapsingEnabled: Bool = false {
         didSet {
@@ -40,10 +38,9 @@ public class SafariViewController: UIViewController {
     }
     
     /**
-     Indicates wich button should be shown in SafariViewController to close it. You can choose between "Close", "Done" and "Cancel".
+     Indicates which button should be shown in SafariViewController to close it.
      
-     -Important:
-     Only works for iOS 11.0 and higher.
+     - Attention: Only apply for SDK: iOS 11.0+
      */
     public var dismissButtonStyle: DismissButtonStyle = DismissButtonStyle.done {
         didSet {
@@ -54,7 +51,7 @@ public class SafariViewController: UIViewController {
     }
     
     /**
-     Indicates that SafariViewController should be presented modally.
+     Indicates if SafariViewController should be presented modally.
      */
     public var presentModally: Bool = false {
         didSet {
@@ -118,11 +115,14 @@ extension SafariViewController {
     /**
      Present SafariViewController from the previous ViewController.
      
-     - Parameters:
-     - previousViewController: The ViewController that will present the Browser.
-     - handler: A method used as a callback when the user closes the Browser.
+     - parameters:
+        - previousViewController: The ViewController that will present the Browser.
+        - handler: A method used as a callback when the user closes the Browser.
      */
     public func presentSafari(fromViewController previousViewController: UIViewController, whenDidFinish handler: (() -> Void)?) {
+        guard safariViewController != nil else {
+            return
+        }
         self.handler = handler
         previousViewController.present(safariViewController!, animated: true, completion: nil)
         previousViewController.present(self, animated: true, completion: nil)
@@ -138,4 +138,3 @@ extension SafariViewController: SFSafariViewControllerDelegate {
         completion()
     }
 }
-

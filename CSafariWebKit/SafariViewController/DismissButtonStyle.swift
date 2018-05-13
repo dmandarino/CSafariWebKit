@@ -10,8 +10,11 @@ import SafariServices
 
 public enum DismissButtonStyle {
     
+    /// Dismiss button style will be set as Cancel
     case cancel
+    /// Dismiss button style will be set as Close
     case close
+    /// Dismiss button style will be set as Done
     case done
     
     @available(iOS 11.0, *)
