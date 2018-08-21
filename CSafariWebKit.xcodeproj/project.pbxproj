@@ -139,8 +139,8 @@
 		5AF7862421213BF300F8D694 /* WKWebView */ = {
 			isa = PBXGroup;
 			children = (
-				5AF7862521213C1300F8D694 /* WebViewController.swift */,
 				5A57815F212A6F2500DE4B2D /* ButtonSide.swift */,
+				5AF7862521213C1300F8D694 /* WebViewController.swift */,
 				5AD994B3212BD09E00259D5B /* WebViewControllerProtocol.swift */,
 			);
 			path = WKWebView;
