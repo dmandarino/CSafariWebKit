@@ -9,141 +9,125 @@
 import UIKit
 import SafariServices
 
+
 public class SafariViewController: UIViewController {
     
-    /**
-     Indicates if SafariViewController should automatically show the Reader version of web pages. This will only happen when Safari Reader is available on a web page.
-     
-     - Attention: Only apply for SDK: iOS 11.0+
-     */
-    public var entersReaderIfAvailable: Bool = false {
+    private var entersReaderIfAvailable: Bool = false {
         didSet {
             if #available(iOS 11.0, *) {
                 SafariConfiguration.entersReaderIfAvailable = entersReaderIfAvailable
             }
         }
     }
-    
-    /**
-     Should enable collapsing of the navigation bar and hiding of the bottom toolbar when the user scrolls web content.
-     
-     - Attention: Only apply for SDK: iOS 11.0+
-     */
-    public var barCollapsingEnabled: Bool = false {
+    private var barCollapsingEnabled: Bool = false {
         didSet {
             if #available(iOS 11.0, *) {
                 SafariConfiguration.barCollapsingEnabled = barCollapsingEnabled
             }
         }
     }
-    
-    /**
-     Indicates which button should be shown in SafariViewController to close it.
-     
-     - Attention: Only apply for SDK: iOS 11.0+
-     */
-    public var dismissButtonStyle: DismissButtonStyle = DismissButtonStyle.done {
+    private var dismissButtonStyle: DismissButtonStyle = DismissButtonStyle.done {
         didSet {
             if #available(iOS 11.0, *) {
                 self.safariViewController?.dismissButtonStyle = dismissButtonStyle.getStyle()
             }
         }
     }
-    
-    /**
-     Indicates if SafariViewController should be presented modally.
-     */
-    public var presentModally: Bool = false {
+    private var presentModally: Bool = false {
         didSet {
             if presentModally {
                 self.safariViewController?.modalPresentationStyle = UIModalPresentationStyle.popover
             }
         }
     }
-    
-    fileprivate var safariViewController: SFSafariViewController?
-    fileprivate var tintColor: UIColor?
-    fileprivate var currentURL: URL?
-    fileprivate var barTintColor: UIColor?
-    fileprivate var handler: (() -> ())?
-    
-    public init(url: URL, barTintColor: UIColor?, tintColor: UIColor?) {
-        super.init(nibName: nil, bundle: nil)
-        self.currentURL = url
-        self.tintColor = tintColor
-        self.barTintColor = barTintColor
-        createSafariViewController()
-        configureSafariViewController()
-    }
-    
-    internal convenience init(url: URL, barTintColor: UIColor?, tintColor: UIColor?,
-                     safariViewControllerMock: SFSafariViewController) {
-        self.init(url: url, barTintColor: barTintColor, tintColor: tintColor)
-        self.safariViewController = safariViewControllerMock
-        configureSafariViewController()
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func createSafariViewController() {
-        guard let url = currentURL else {
-            NSLog("Error: URL Bad Format.")
-            return
-        }
-        if #available(iOS 11.0, *) {
-            let safariConfiguration = SafariConfiguration.configuration
-            safariViewController = SFSafariViewController(url: url, configuration: safariConfiguration!)
-        } else {
-            safariViewController = SFSafariViewController(url: url)
-        }
-    }
-    
-    private func configureSafariViewController() {
-        safariViewController?.delegate = self
-        setColors()
-    }
-    
-    private func setColors() {
-        if let bar = barTintColor {
-            if #available(iOS 10.0, *) {
-                safariViewController?.preferredBarTintColor = bar
-            } else {
-                safariViewController?.view.tintColor = bar
-            }
-        }
-        if let tint = tintColor {
-            if #available(iOS 10.0, *) {
-                safariViewController?.preferredControlTintColor = tint
-            }
-        }
-    }
+    private var safariViewController: SFSafariViewController!
+    private var didClose: (() -> ())?
 }
 
-extension SafariViewController {
+extension SafariViewController: SafariViewControllerProtocol {
     
-    /**
-     Present SafariViewController from the previous ViewController.
-     
-     - parameters:
-        - previousViewController: The ViewController that will present the Browser.
-        - handler: A method used as a callback when the user closes the Browser.
-     */
-    public func presentSafari(fromViewController previousViewController: UIViewController, whenDidFinish handler: (() -> Void)?) {
-        guard safariViewController != nil else {
-            return
+    public func load(url: URL) -> UIViewController {
+        return buildSafariViewController(forURL: url)
+    }
+    
+    public func present(url: URL, from previousViewController: UIViewController) {
+        present(url: url, from: previousViewController, dismissButtonStyle: self.dismissButtonStyle,
+                presentModally: self.presentModally, barCollapsingEnabled: self.barCollapsingEnabled,
+                entersReaderIfAvailable: self.entersReaderIfAvailable,
+                barTintColor: nil, tintColor: nil, whenDidClose: nil)
+    }
+    
+    public func present(url: URL, from previousViewController: UIViewController, whenDidClose didClose: (() -> Void)?) {
+        present(url: url, from: previousViewController, dismissButtonStyle: self.dismissButtonStyle,
+                presentModally: self.presentModally, barCollapsingEnabled: self.barCollapsingEnabled,
+                entersReaderIfAvailable: self.entersReaderIfAvailable,
+                barTintColor: nil, tintColor: nil, whenDidClose: didClose)
+    }
+    
+    public func present(url: URL, from previousViewController: UIViewController, dismissButtonStyle: DismissButtonStyle,
+                        whenDidClose didClose: (() -> Void)?) {
+        present(url: url, from: previousViewController, dismissButtonStyle: dismissButtonStyle,
+                presentModally: self.presentModally, barCollapsingEnabled: self.barCollapsingEnabled,
+                entersReaderIfAvailable: self.entersReaderIfAvailable,
+                barTintColor: nil, tintColor: nil, whenDidClose: didClose)
+    }
+    
+    public func present(url: URL, from previousViewController: UIViewController, dismissButtonStyle: DismissButtonStyle,
+                        barTintColor: UIColor?, tintColor: UIColor?, whenDidClose didClose: (() -> Void)?) {
+        present(url: url, from: previousViewController, dismissButtonStyle: dismissButtonStyle,
+                presentModally: self.presentModally, barCollapsingEnabled: self.barCollapsingEnabled,
+                entersReaderIfAvailable: self.entersReaderIfAvailable,
+                barTintColor: barTintColor, tintColor: tintColor, whenDidClose: didClose)
+    }
+    
+    public func present(url: URL, from previousViewController: UIViewController, dismissButtonStyle: DismissButtonStyle,
+                        presentModally: Bool, barCollapsingEnabled: Bool, entersReaderIfAvailable: Bool,
+                        barTintColor: UIColor?, tintColor: UIColor?, whenDidClose didClose: (() -> Void)?) {
+        self.didClose = didClose
+        safariViewController = buildSafariViewController(forURL: url)
+        setupSafariConfiguration(dismissButtonStyle: dismissButtonStyle, presentModally: presentModally,
+                                 barCollapsingEnabled: barCollapsingEnabled, entersReaderIfAvailable: entersReaderIfAvailable)
+        setupColors(from: previousViewController, barTintColor: barTintColor, tintColor: tintColor)
+        presentSafariViewController(previousViewController: previousViewController)
+    }
+    
+    private func setupSafariConfiguration(dismissButtonStyle: DismissButtonStyle, presentModally: Bool,
+                                          barCollapsingEnabled: Bool, entersReaderIfAvailable: Bool) {
+        self.safariViewController?.delegate = self
+        self.entersReaderIfAvailable = entersReaderIfAvailable
+        self.dismissButtonStyle = dismissButtonStyle
+        self.barCollapsingEnabled = barCollapsingEnabled
+        self.presentModally = presentModally
+    }
+    
+    private func buildSafariViewController(forURL url: URL) -> SFSafariViewController {
+        if #available(iOS 11.0, *) {
+            let safariConfiguration = SafariConfiguration.configuration
+            return SFSafariViewController(url: url, configuration: safariConfiguration)
+        } else {
+            return SFSafariViewController(url: url)
         }
-        self.handler = handler
-        previousViewController.present(safariViewController!, animated: true, completion: nil)
+    }
+    
+    private func presentSafariViewController(previousViewController: UIViewController) {
+        previousViewController.present(safariViewController, animated: true, completion: nil)
         previousViewController.present(self, animated: true, completion: nil)
+    }
+    
+    private func setupColors(from previousViewController: UIViewController, barTintColor: UIColor?, tintColor: UIColor?) {
+        if #available(iOS 10.0, *) {
+            safariViewController?.preferredBarTintColor = barTintColor ?? previousViewController.navigationController?.navigationBar.barTintColor
+            safariViewController?.preferredControlTintColor = tintColor ?? previousViewController.navigationController?.navigationBar.tintColor
+        } else {
+            safariViewController?.view.tintColor = tintColor ?? previousViewController.navigationController?.navigationBar.tintColor
+        }
     }
 }
 
 extension SafariViewController: SFSafariViewControllerDelegate {
     
     public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        guard let completion = handler else {
+        guard let completion = didClose else {
             return
         }
         completion()

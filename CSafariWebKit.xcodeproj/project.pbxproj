@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		558F212EC248FE8A83C29E3E /* Pods_CSafariWebKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1851F5870B1F3CB4FC48543B /* Pods_CSafariWebKitTests.framework */; };
+		5A135001212BD44D00FFC9B3 /* WebViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD994B3212BD09E00259D5B /* WebViewControllerProtocol.swift */; };
 		5A4C77DB20A559D7009107EF /* SafariConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4C77DA20A559D7009107EF /* SafariConfiguration.swift */; };
+		5A578160212A6F2500DE4B2D /* ButtonSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A57815F212A6F2500DE4B2D /* ButtonSide.swift */; };
+		5A578161212A711E00DE4B2D /* ButtonSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A57815F212A6F2500DE4B2D /* ButtonSide.swift */; };
 		5A6F80B9209C26E9006BE795 /* CSafariWebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6F80AF209C26E9006BE795 /* CSafariWebKit.framework */; };
 		5A6F80BE209C26E9006BE795 /* CSafariWebKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80BD209C26E9006BE795 /* CSafariWebKitTests.swift */; };
 		5A6F80C0209C26E9006BE795 /* CSafariWebKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A6F80B2209C26E9006BE795 /* CSafariWebKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,6 +19,9 @@
 		5A6F80CC209C29EE006BE795 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80CA209C29EE006BE795 /* SafariViewController.swift */; };
 		5A6F80D1209C2A62006BE795 /* DismissButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80D0209C2A62006BE795 /* DismissButtonStyle.swift */; };
 		5A6F80D2209C2A62006BE795 /* DismissButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80D0209C2A62006BE795 /* DismissButtonStyle.swift */; };
+		5AD994B1212BCF9C00259D5B /* SafariViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD994B0212BCF9C00259D5B /* SafariViewControllerProtocol.swift */; };
+		5AD994B2212BCF9C00259D5B /* SafariViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD994B0212BCF9C00259D5B /* SafariViewControllerProtocol.swift */; };
+		5AD994B4212BD09E00259D5B /* WebViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD994B3212BD09E00259D5B /* WebViewControllerProtocol.swift */; };
 		5AF7862621213C1300F8D694 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7862521213C1300F8D694 /* WebViewController.swift */; };
 		5AF7862821213C5900F8D694 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7862721213C5900F8D694 /* WebView.swift */; };
 		5AF7862921213D7E00F8D694 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7862521213C1300F8D694 /* WebViewController.swift */; };
@@ -38,6 +44,7 @@
 		1851F5870B1F3CB4FC48543B /* Pods_CSafariWebKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSafariWebKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		485DAD90EAD30046373D9773 /* Pods-CSafariWebKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKit/Pods-CSafariWebKit.debug.xcconfig"; sourceTree = "<group>"; };
 		5A4C77DA20A559D7009107EF /* SafariConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariConfiguration.swift; sourceTree = "<group>"; };
+		5A57815F212A6F2500DE4B2D /* ButtonSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSide.swift; sourceTree = "<group>"; };
 		5A6F80AF209C26E9006BE795 /* CSafariWebKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSafariWebKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6F80B2209C26E9006BE795 /* CSafariWebKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSafariWebKit.h; sourceTree = "<group>"; };
 		5A6F80B3209C26E9006BE795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +53,8 @@
 		5A6F80BF209C26E9006BE795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6F80CA209C29EE006BE795 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		5A6F80D0209C2A62006BE795 /* DismissButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButtonStyle.swift; sourceTree = "<group>"; };
+		5AD994B0212BCF9C00259D5B /* SafariViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewControllerProtocol.swift; sourceTree = "<group>"; };
+		5AD994B3212BD09E00259D5B /* WebViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerProtocol.swift; sourceTree = "<group>"; };
 		5AF7862521213C1300F8D694 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5AF7862721213C5900F8D694 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		7E56787FD79FE7F31B73B362 /* Pods-CSafariWebKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKitTests/Pods-CSafariWebKitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +131,7 @@
 				5A6F80CA209C29EE006BE795 /* SafariViewController.swift */,
 				5A6F80D0209C2A62006BE795 /* DismissButtonStyle.swift */,
 				5A4C77DA20A559D7009107EF /* SafariConfiguration.swift */,
+				5AD994B0212BCF9C00259D5B /* SafariViewControllerProtocol.swift */,
 			);
 			path = SafariViewController;
 			sourceTree = "<group>";
@@ -130,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				5AF7862521213C1300F8D694 /* WebViewController.swift */,
+				5A57815F212A6F2500DE4B2D /* ButtonSide.swift */,
+				5AD994B3212BD09E00259D5B /* WebViewControllerProtocol.swift */,
 			);
 			path = WKWebView;
 			sourceTree = "<group>";
@@ -305,8 +317,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6F80D1209C2A62006BE795 /* DismissButtonStyle.swift in Sources */,
+				5AD994B4212BD09E00259D5B /* WebViewControllerProtocol.swift in Sources */,
 				5AF7862821213C5900F8D694 /* WebView.swift in Sources */,
+				5A578160212A6F2500DE4B2D /* ButtonSide.swift in Sources */,
 				5AF7862621213C1300F8D694 /* WebViewController.swift in Sources */,
+				5AD994B1212BCF9C00259D5B /* SafariViewControllerProtocol.swift in Sources */,
 				5A4C77DB20A559D7009107EF /* SafariConfiguration.swift in Sources */,
 				5A6F80CB209C29EE006BE795 /* SafariViewController.swift in Sources */,
 			);
@@ -319,8 +334,11 @@
 				5A6F80D2209C2A62006BE795 /* DismissButtonStyle.swift in Sources */,
 				5A6F80CC209C29EE006BE795 /* SafariViewController.swift in Sources */,
 				A279B05B20A8CD0F00252BC0 /* SafariConfiguration.swift in Sources */,
+				5A578161212A711E00DE4B2D /* ButtonSide.swift in Sources */,
+				5AD994B2212BCF9C00259D5B /* SafariViewControllerProtocol.swift in Sources */,
 				5AF7862A21213D8300F8D694 /* WebView.swift in Sources */,
 				5AF7862921213D7E00F8D694 /* WebViewController.swift in Sources */,
+				5A135001212BD44D00FFC9B3 /* WebViewControllerProtocol.swift in Sources */,
 				5A6F80BE209C26E9006BE795 /* CSafariWebKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,7 +498,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -508,7 +526,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mandarino.douglas.CSafariWebKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -528,7 +546,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mandarino.douglas.CSafariWebKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -548,7 +566,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mandarino.douglas.CSafariWebKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

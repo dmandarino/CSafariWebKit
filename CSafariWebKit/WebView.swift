@@ -10,9 +10,15 @@ import Foundation
 
 class WebView {
     
-    public static var wkWebView: WebViewControllerProcotol {
+    public static var wkWebView: WebViewControllerProtocol {
         get {
             return WebViewController()
+        }
+    }
+   
+    public static var safari: SafariViewControllerProtocol {
+        get {
+            return SafariViewController()
         }
     }
 }

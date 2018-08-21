@@ -9,19 +9,8 @@
 import Foundation
 import WebKit
 
-public protocol WebViewControllerProcotol {
-    func load(url: URL) -> UIView
-    func presentClosingOnLeft(url: URL, from previousViewController: UIViewController)
-    func presentClosingOnLeft(url: URL, from previousViewController: UIViewController, didClose: (() -> Void)?)
-    func presentClosingOnLeft(url: URL, from previousViewController: UIViewController, closeButton: String?, barTintColor: UIColor?, tintColor: UIColor?, title: String?, didClose: (() -> Void)?)
-    func presentClosingOnLeft(url: URL, from previousViewController: UIViewController, closeButton: String?, barTintColor: UIColor?, tintColor: UIColor?, title: String?, userAgent: String, didClose: (() -> Void)?)
-    func presentClosingOnRight(url: URL, from previousViewController: UIViewController)
-    func presentClosingOnRight(url: URL, from previousViewController: UIViewController, didClose: (() -> Void)?)
-    func presentClosingOnRight(url: URL, from previousViewController: UIViewController, closeButton: String?, barTintColor: UIColor?, tintColor: UIColor?, title: String?, didClose: (() -> Void)?)
-    func presentClosingOnRight(url: URL, from previousViewController: UIViewController, closeButton: String?, barTintColor: UIColor?, tintColor: UIColor?, title: String?, userAgent: String, didClose: (() -> Void)?)
-}
 
-public class WebViewController: UIViewController {
+class WebViewController: UIViewController {
     
     private var webView: WKWebView!
     private var didClose: (() -> ())?
@@ -42,59 +31,52 @@ public class WebViewController: UIViewController {
     }
 }
 
-extension WebViewController: WebViewControllerProcotol {
+extension WebViewController: WebViewControllerProtocol {
     
-    public func load(url: URL) -> UIView {
+    func load(url: URL) -> UIView {
         loadWebView(url: url)
         return self.view
     }
     
-    public func presentClosingOnLeft(url: URL, from previousViewController: UIViewController) {
-        presentClosingOnLeft(url: url, from: previousViewController, closeButton: nil, barTintColor: nil, tintColor: nil, title: nil, userAgent: "", didClose: nil)
+    func present(url: URL, from previousViewController: UIViewController) {
+        present(url: url, from: previousViewController, closeButtonName: nil, buttonSide: .left,
+                barTintColor: nil, tintColor: nil, title: nil, userAgent: "", didClose: nil)
     }
     
-    public func presentClosingOnLeft(url: URL, from previousViewController: UIViewController, didClose: (() -> Void)?) {
-        presentClosingOnLeft(url: url, from: previousViewController, closeButton: nil, barTintColor: nil, tintColor: nil, title: nil, userAgent: "", didClose: didClose)
+    func present(url: URL, from previousViewController: UIViewController, whenDidClose didClose: (() -> Void)?) {
+        present(url: url, from: previousViewController, closeButtonName: nil, buttonSide: .left,
+                barTintColor: nil, tintColor: nil, title: nil, userAgent: "", didClose: didClose)
     }
     
-    public func presentClosingOnLeft(url: URL, from previousViewController: UIViewController, closeButton: String?, barTintColor: UIColor?, tintColor: UIColor?, title: String?, didClose: (() -> Void)?) {
-        presentClosingOnLeft(url: url, from: previousViewController, closeButton: closeButton, barTintColor: barTintColor, tintColor: tintColor, title: title, userAgent: "", didClose: didClose)
+    func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
+                 barTintColor: UIColor?, tintColor: UIColor?, whenDidClose didClose: (() -> Void)?) {
+        present(url: url, from: previousViewController, closeButtonName: closeButtonName, buttonSide: buttonSide,
+                barTintColor: barTintColor, tintColor: tintColor, title: nil, userAgent: "", didClose: didClose)
     }
     
-    public func presentClosingOnLeft(url: URL, from previousViewController: UIViewController, closeButton: String?, barTintColor: UIColor?, tintColor: UIColor?, title: String?, userAgent: String, didClose: (() -> Void)?) {
-        presentWebView(url: url, from: previousViewController, closeButton: closeButton,
+    func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
+                 barTintColor: UIColor?, tintColor: UIColor?, title: String?, whenDidClose didClose: (() -> Void)?) {
+        present(url: url, from: previousViewController, closeButtonName: closeButtonName, buttonSide: buttonSide,
+                barTintColor: barTintColor, tintColor: tintColor, title: title, userAgent: "", didClose: didClose)
+    }
+    
+    func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
+                 barTintColor: UIColor?, tintColor: UIColor?, title: String?, userAgent: String, didClose: (() -> Void)?) {
+        presentWebView(url: url, from: previousViewController, closeButtonName: closeButtonName,
                        barTintColor: barTintColor, tintColor: tintColor, title: title, userAgent: "", didClose: didClose)
-        navigationItem.leftBarButtonItem = createCloseButton(buttonName: closeButton)
+        setCloseButton(closeButtonName: closeButtonName, buttonSide: buttonSide)
     }
     
-    public func presentClosingOnRight(url: URL, from previousViewController: UIViewController) {
-        presentClosingOnRight(url: url, from: previousViewController, closeButton: nil, barTintColor: nil, tintColor: nil, title: nil, userAgent: "", didClose: nil)
-    }
-    
-    public func presentClosingOnRight(url: URL, from previousViewController: UIViewController, didClose: (() -> Void)?) {
-        presentClosingOnRight(url: url, from: previousViewController, closeButton: nil, barTintColor: nil, tintColor: nil, title: nil, userAgent: "", didClose: didClose)
-    }
-    
-    public func presentClosingOnRight(url: URL, from previousViewController: UIViewController, closeButton: String?, barTintColor: UIColor?, tintColor: UIColor?, title: String?, didClose: (() -> Void)?) {
-        presentClosingOnRight(url: url, from: previousViewController, closeButton: closeButton, barTintColor: barTintColor, tintColor: tintColor, title: title, userAgent: "", didClose: didClose)
-    }
-    
-    public func presentClosingOnRight(url: URL, from previousViewController: UIViewController, closeButton: String?, barTintColor: UIColor?, tintColor: UIColor?, title: String?, userAgent: String, didClose: (() -> Void)?) {
-        presentWebView(url: url, from: previousViewController, closeButton: closeButton,
-                       barTintColor: barTintColor, tintColor: tintColor, title: title, userAgent: "", didClose: didClose)
-        navigationItem.rightBarButtonItem = createCloseButton(buttonName: closeButton)
-    }
-    
-    private func presentWebView(url: URL, from previousViewController: UIViewController, closeButton: String?,
+    private func presentWebView(url: URL, from previousViewController: UIViewController, closeButtonName: String?,
                                 barTintColor: UIColor?, tintColor: UIColor?, title: String?, userAgent: String, didClose: (() -> Void)?) {
         loadWebView(url: url)
         self.didClose = didClose
-        setupNavigationController(from: previousViewController, closeButton: closeButton, barTintColor: barTintColor, tintColor: tintColor, title: title)
+        setupNavigationController(from: previousViewController, closeButtonName: closeButtonName, barTintColor: barTintColor, tintColor: tintColor, title: title)
         webView.customUserAgent?.append(userAgent)
         presentViewController(from: previousViewController)
     }
     
-    private func setupNavigationController(from previousViewController: UIViewController, closeButton: String?,
+    private func setupNavigationController(from previousViewController: UIViewController, closeButtonName: String?,
                                            barTintColor: UIColor?, tintColor: UIColor?, title: String?) {
         navController = UINavigationController(rootViewController: self)
         navController.navigationBar.barTintColor = barTintColor ?? previousViewController.navigationController?.navigationBar.barTintColor
@@ -118,9 +100,13 @@ extension WebViewController: WebViewControllerProcotol {
         }
     }
     
-    private func loadWebView(url: URL) {
-        webView.load(URLRequest(url: url))
-        self.view = webView
+    private func setCloseButton(closeButtonName: String?, buttonSide: ButtonSide) {
+        switch buttonSide {
+        case .right:
+            navigationItem.rightBarButtonItem = createCloseButton(buttonName: closeButtonName)
+        default:
+            navigationItem.leftBarButtonItem = createCloseButton(buttonName: closeButtonName)
+        }
     }
     
     @objc private func closeWebView() {
@@ -130,15 +116,20 @@ extension WebViewController: WebViewControllerProcotol {
 
 extension WebViewController: WKNavigationDelegate {
     
-    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         print(error.localizedDescription)
     }
     
-    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         print("Start loading")
     }
     
-    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("Finish loading")
+    }
+    
+    private func loadWebView(url: URL) {
+        webView.load(URLRequest(url: url))
+        self.view = webView
     }
 }

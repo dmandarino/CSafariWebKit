@@ -13,19 +13,15 @@ struct SafariConfiguration {
     
     static var entersReaderIfAvailable: Bool = false {
         didSet {
-            self.customizedConfiguration.entersReaderIfAvailable = entersReaderIfAvailable
+            self.configuration.entersReaderIfAvailable = entersReaderIfAvailable
         }
     }
     
     static var barCollapsingEnabled: Bool = false {
         didSet {
-            self.customizedConfiguration.barCollapsingEnabled = barCollapsingEnabled
+            self.configuration.barCollapsingEnabled = barCollapsingEnabled
         }
     }
     
-    static var configuration: SFSafariViewController.Configuration? {
-        return customizedConfiguration
-    }
-    
-    static private var customizedConfiguration = SFSafariViewController.Configuration()
+    static var configuration: SFSafariViewController.Configuration = SFSafariViewController.Configuration()
 }
