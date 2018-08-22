@@ -9,7 +9,7 @@
 import WebKit
 import UIKit
 
-protocol WebViewControllerProtocol {
+public protocol WebViewControllerProtocol {
     /**
      Create a WKWebView and return it as an UIView.
      
@@ -19,7 +19,7 @@ protocol WebViewControllerProtocol {
      - Parameters:
      - url: The URL to be loaded.
      */
-    func load(url: URL) -> UIView
+    func load(url: URL) -> UIViewController
     /**
      Present WKWebView from the previous ViewController.
      

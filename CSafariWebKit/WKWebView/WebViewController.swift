@@ -33,9 +33,9 @@ class WebViewController: UIViewController {
 
 extension WebViewController: WebViewControllerProtocol {
     
-    func load(url: URL) -> UIView {
+    func load(url: URL) -> UIViewController {
         loadWebView(url: url)
-        return self.view
+        return self
     }
     
     func present(url: URL, from previousViewController: UIViewController) {

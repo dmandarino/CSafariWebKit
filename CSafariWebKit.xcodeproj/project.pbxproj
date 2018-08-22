@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		558F212EC248FE8A83C29E3E /* Pods_CSafariWebKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1851F5870B1F3CB4FC48543B /* Pods_CSafariWebKitTests.framework */; };
+		39995D94CAC83D6541716E19 /* Pods_CSafariWebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE35BAF4D4F6F93EF8E404D4 /* Pods_CSafariWebKit.framework */; };
 		5A135001212BD44D00FFC9B3 /* WebViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD994B3212BD09E00259D5B /* WebViewControllerProtocol.swift */; };
+		5A2740EB212C499800E82C33 /* WebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2740EA212C499800E82C33 /* WebViewTests.swift */; };
+		5A2740ED212C4C4A00E82C33 /* WebViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2740EC212C4C4A00E82C33 /* WebViewProtocol.swift */; };
+		5A2740EE212C4C4D00E82C33 /* WebViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2740EC212C4C4A00E82C33 /* WebViewProtocol.swift */; };
 		5A4C77DB20A559D7009107EF /* SafariConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4C77DA20A559D7009107EF /* SafariConfiguration.swift */; };
 		5A578160212A6F2500DE4B2D /* ButtonSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A57815F212A6F2500DE4B2D /* ButtonSide.swift */; };
 		5A578161212A711E00DE4B2D /* ButtonSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A57815F212A6F2500DE4B2D /* ButtonSide.swift */; };
 		5A6F80B9209C26E9006BE795 /* CSafariWebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6F80AF209C26E9006BE795 /* CSafariWebKit.framework */; };
-		5A6F80BE209C26E9006BE795 /* CSafariWebKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80BD209C26E9006BE795 /* CSafariWebKitTests.swift */; };
 		5A6F80C0209C26E9006BE795 /* CSafariWebKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A6F80B2209C26E9006BE795 /* CSafariWebKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A6F80CB209C29EE006BE795 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80CA209C29EE006BE795 /* SafariViewController.swift */; };
 		5A6F80CC209C29EE006BE795 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F80CA209C29EE006BE795 /* SafariViewController.swift */; };
@@ -27,7 +29,7 @@
 		5AF7862921213D7E00F8D694 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7862521213C1300F8D694 /* WebViewController.swift */; };
 		5AF7862A21213D8300F8D694 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7862721213C5900F8D694 /* WebView.swift */; };
 		A279B05B20A8CD0F00252BC0 /* SafariConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4C77DA20A559D7009107EF /* SafariConfiguration.swift */; };
-		B9ED937048490DEEAE9F7722 /* Pods_CSafariWebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE4E8FE04E76E6B08726012 /* Pods_CSafariWebKit.framework */; };
+		CE789AB5E6E752AAB9B52AE3 /* Pods_CSafariWebKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6509C405BAF17FB387E6EC96 /* Pods_CSafariWebKitTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,15 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1851F5870B1F3CB4FC48543B /* Pods_CSafariWebKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSafariWebKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		485DAD90EAD30046373D9773 /* Pods-CSafariWebKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKit/Pods-CSafariWebKit.debug.xcconfig"; sourceTree = "<group>"; };
+		5A2740EA212C499800E82C33 /* WebViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewTests.swift; sourceTree = "<group>"; };
+		5A2740EC212C4C4A00E82C33 /* WebViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewProtocol.swift; sourceTree = "<group>"; };
 		5A4C77DA20A559D7009107EF /* SafariConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariConfiguration.swift; sourceTree = "<group>"; };
 		5A57815F212A6F2500DE4B2D /* ButtonSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSide.swift; sourceTree = "<group>"; };
 		5A6F80AF209C26E9006BE795 /* CSafariWebKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSafariWebKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6F80B2209C26E9006BE795 /* CSafariWebKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSafariWebKit.h; sourceTree = "<group>"; };
 		5A6F80B3209C26E9006BE795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6F80B8209C26E9006BE795 /* CSafariWebKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSafariWebKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A6F80BD209C26E9006BE795 /* CSafariWebKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSafariWebKitTests.swift; sourceTree = "<group>"; };
 		5A6F80BF209C26E9006BE795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6F80CA209C29EE006BE795 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		5A6F80D0209C2A62006BE795 /* DismissButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButtonStyle.swift; sourceTree = "<group>"; };
@@ -57,10 +58,12 @@
 		5AD994B3212BD09E00259D5B /* WebViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerProtocol.swift; sourceTree = "<group>"; };
 		5AF7862521213C1300F8D694 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5AF7862721213C5900F8D694 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		7E56787FD79FE7F31B73B362 /* Pods-CSafariWebKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKitTests/Pods-CSafariWebKitTests.release.xcconfig"; sourceTree = "<group>"; };
-		AA4E62A0AF398FCBA693A378 /* Pods-CSafariWebKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKit/Pods-CSafariWebKit.release.xcconfig"; sourceTree = "<group>"; };
-		E5488348A70AEA0F7310133A /* Pods-CSafariWebKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKitTests/Pods-CSafariWebKitTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EAE4E8FE04E76E6B08726012 /* Pods_CSafariWebKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSafariWebKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6509C405BAF17FB387E6EC96 /* Pods_CSafariWebKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSafariWebKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E7DFC8B58BD99799ABAF0E7 /* Pods-CSafariWebKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKit/Pods-CSafariWebKit.release.xcconfig"; sourceTree = "<group>"; };
+		AE35BAF4D4F6F93EF8E404D4 /* Pods_CSafariWebKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSafariWebKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C19345DFE5E759C7E8594FDA /* Pods-CSafariWebKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKit/Pods-CSafariWebKit.debug.xcconfig"; sourceTree = "<group>"; };
+		D5B380B363D6C6B365D60CD8 /* Pods-CSafariWebKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKitTests/Pods-CSafariWebKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F555B297FC2EE4291AF16A03 /* Pods-CSafariWebKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSafariWebKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSafariWebKitTests/Pods-CSafariWebKitTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9ED937048490DEEAE9F7722 /* Pods_CSafariWebKit.framework in Frameworks */,
+				39995D94CAC83D6541716E19 /* Pods_CSafariWebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,21 +80,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6F80B9209C26E9006BE795 /* CSafariWebKit.framework in Frameworks */,
-				558F212EC248FE8A83C29E3E /* Pods_CSafariWebKitTests.framework in Frameworks */,
+				CE789AB5E6E752AAB9B52AE3 /* Pods_CSafariWebKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		295087BEBA9B4696C4CBC971 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C19345DFE5E759C7E8594FDA /* Pods-CSafariWebKit.debug.xcconfig */,
+				6E7DFC8B58BD99799ABAF0E7 /* Pods-CSafariWebKit.release.xcconfig */,
+				D5B380B363D6C6B365D60CD8 /* Pods-CSafariWebKitTests.debug.xcconfig */,
+				F555B297FC2EE4291AF16A03 /* Pods-CSafariWebKitTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5A6F80A5209C26E9006BE795 = {
 			isa = PBXGroup;
 			children = (
 				5A6F80B1209C26E9006BE795 /* CSafariWebKit */,
 				5A6F80BC209C26E9006BE795 /* CSafariWebKitTests */,
 				5A6F80B0209C26E9006BE795 /* Products */,
-				C32A867351702C508060FD31 /* Pods */,
-				8D69F74D8CEABDD84B5B1560 /* Frameworks */,
+				295087BEBA9B4696C4CBC971 /* Pods */,
+				E6D6B5E48A46AD30F5C17E48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +124,7 @@
 				5AF7862421213BF300F8D694 /* WKWebView */,
 				5A6F80C9209C29CC006BE795 /* SafariViewController */,
 				5A6F80B2209C26E9006BE795 /* CSafariWebKit.h */,
+				5A2740EC212C4C4A00E82C33 /* WebViewProtocol.swift */,
 				5AF7862721213C5900F8D694 /* WebView.swift */,
 				5A6F80B3209C26E9006BE795 /* Info.plist */,
 			);
@@ -119,7 +134,7 @@
 		5A6F80BC209C26E9006BE795 /* CSafariWebKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A6F80BD209C26E9006BE795 /* CSafariWebKitTests.swift */,
+				5A2740EA212C499800E82C33 /* WebViewTests.swift */,
 				5A6F80BF209C26E9006BE795 /* Info.plist */,
 			);
 			path = CSafariWebKitTests;
@@ -128,10 +143,10 @@
 		5A6F80C9209C29CC006BE795 /* SafariViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5A6F80CA209C29EE006BE795 /* SafariViewController.swift */,
 				5A6F80D0209C2A62006BE795 /* DismissButtonStyle.swift */,
 				5A4C77DA20A559D7009107EF /* SafariConfiguration.swift */,
 				5AD994B0212BCF9C00259D5B /* SafariViewControllerProtocol.swift */,
+				5A6F80CA209C29EE006BE795 /* SafariViewController.swift */,
 			);
 			path = SafariViewController;
 			sourceTree = "<group>";
@@ -140,30 +155,19 @@
 			isa = PBXGroup;
 			children = (
 				5A57815F212A6F2500DE4B2D /* ButtonSide.swift */,
-				5AF7862521213C1300F8D694 /* WebViewController.swift */,
 				5AD994B3212BD09E00259D5B /* WebViewControllerProtocol.swift */,
+				5AF7862521213C1300F8D694 /* WebViewController.swift */,
 			);
 			path = WKWebView;
 			sourceTree = "<group>";
 		};
-		8D69F74D8CEABDD84B5B1560 /* Frameworks */ = {
+		E6D6B5E48A46AD30F5C17E48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EAE4E8FE04E76E6B08726012 /* Pods_CSafariWebKit.framework */,
-				1851F5870B1F3CB4FC48543B /* Pods_CSafariWebKitTests.framework */,
+				AE35BAF4D4F6F93EF8E404D4 /* Pods_CSafariWebKit.framework */,
+				6509C405BAF17FB387E6EC96 /* Pods_CSafariWebKitTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C32A867351702C508060FD31 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				485DAD90EAD30046373D9773 /* Pods-CSafariWebKit.debug.xcconfig */,
-				AA4E62A0AF398FCBA693A378 /* Pods-CSafariWebKit.release.xcconfig */,
-				E5488348A70AEA0F7310133A /* Pods-CSafariWebKitTests.debug.xcconfig */,
-				7E56787FD79FE7F31B73B362 /* Pods-CSafariWebKitTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6F80D1209C2A62006BE795 /* DismissButtonStyle.swift in Sources */,
+				5A2740ED212C4C4A00E82C33 /* WebViewProtocol.swift in Sources */,
 				5AD994B4212BD09E00259D5B /* WebViewControllerProtocol.swift in Sources */,
 				5AF7862821213C5900F8D694 /* WebView.swift in Sources */,
 				5A578160212A6F2500DE4B2D /* ButtonSide.swift in Sources */,
@@ -338,8 +343,9 @@
 				5AD994B2212BCF9C00259D5B /* SafariViewControllerProtocol.swift in Sources */,
 				5AF7862A21213D8300F8D694 /* WebView.swift in Sources */,
 				5AF7862921213D7E00F8D694 /* WebViewController.swift in Sources */,
+				5A2740EE212C4C4D00E82C33 /* WebViewProtocol.swift in Sources */,
+				5A2740EB212C499800E82C33 /* WebViewTests.swift in Sources */,
 				5A135001212BD44D00FFC9B3 /* WebViewControllerProtocol.swift in Sources */,
-				5A6F80BE209C26E9006BE795 /* CSafariWebKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +482,7 @@
 		};
 		5A6F80C4209C26E9006BE795 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 485DAD90EAD30046373D9773 /* Pods-CSafariWebKit.debug.xcconfig */;
+			baseConfigurationReference = C19345DFE5E759C7E8594FDA /* Pods-CSafariWebKit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -505,7 +511,7 @@
 		};
 		5A6F80C5209C26E9006BE795 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA4E62A0AF398FCBA693A378 /* Pods-CSafariWebKit.release.xcconfig */;
+			baseConfigurationReference = 6E7DFC8B58BD99799ABAF0E7 /* Pods-CSafariWebKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -533,7 +539,7 @@
 		};
 		5A6F80C7209C26E9006BE795 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5488348A70AEA0F7310133A /* Pods-CSafariWebKitTests.debug.xcconfig */;
+			baseConfigurationReference = D5B380B363D6C6B365D60CD8 /* Pods-CSafariWebKitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -553,7 +559,7 @@
 		};
 		5A6F80C8209C26E9006BE795 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E56787FD79FE7F31B73B362 /* Pods-CSafariWebKitTests.release.xcconfig */;
+			baseConfigurationReference = F555B297FC2EE4291AF16A03 /* Pods-CSafariWebKitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
