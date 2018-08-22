@@ -16,12 +16,12 @@ public class WebViewController: UIViewController {
     private var didClose: (() -> ())?
     private var navController: UINavigationController!
     
-    init() {
+    public init() {
         super.init(nibName: nil, bundle: nil)
         configure()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
