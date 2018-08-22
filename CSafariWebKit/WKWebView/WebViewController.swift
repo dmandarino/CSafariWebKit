@@ -10,7 +10,7 @@ import Foundation
 import WebKit
 
 
-class WebViewController: UIViewController {
+public class WebViewController: UIViewController {
     
     private var webView: WKWebView!
     private var didClose: (() -> ())?
@@ -33,34 +33,34 @@ class WebViewController: UIViewController {
 
 extension WebViewController: WebViewControllerProtocol {
     
-    func load(url: URL) -> UIViewController {
+    public func load(url: URL) -> UIViewController {
         loadWebView(url: url)
         return self
     }
     
-    func present(url: URL, from previousViewController: UIViewController) {
+    public func present(url: URL, from previousViewController: UIViewController) {
         present(url: url, from: previousViewController, closeButtonName: nil, buttonSide: .left,
                 barTintColor: nil, tintColor: nil, title: nil, userAgent: "", didClose: nil)
     }
     
-    func present(url: URL, from previousViewController: UIViewController, whenDidClose didClose: (() -> Void)?) {
+    public func present(url: URL, from previousViewController: UIViewController, whenDidClose didClose: (() -> Void)?) {
         present(url: url, from: previousViewController, closeButtonName: nil, buttonSide: .left,
                 barTintColor: nil, tintColor: nil, title: nil, userAgent: "", didClose: didClose)
     }
     
-    func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
+    public func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
                  barTintColor: UIColor?, tintColor: UIColor?, whenDidClose didClose: (() -> Void)?) {
         present(url: url, from: previousViewController, closeButtonName: closeButtonName, buttonSide: buttonSide,
                 barTintColor: barTintColor, tintColor: tintColor, title: nil, userAgent: "", didClose: didClose)
     }
     
-    func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
+    public func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
                  barTintColor: UIColor?, tintColor: UIColor?, title: String?, whenDidClose didClose: (() -> Void)?) {
         present(url: url, from: previousViewController, closeButtonName: closeButtonName, buttonSide: buttonSide,
                 barTintColor: barTintColor, tintColor: tintColor, title: title, userAgent: "", didClose: didClose)
     }
     
-    func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
+    public func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
                  barTintColor: UIColor?, tintColor: UIColor?, title: String?, userAgent: String, didClose: (() -> Void)?) {
         presentWebView(url: url, from: previousViewController, closeButtonName: closeButtonName,
                        barTintColor: barTintColor, tintColor: tintColor, title: title, userAgent: "", didClose: didClose)
@@ -116,15 +116,15 @@ extension WebViewController: WebViewControllerProtocol {
 
 extension WebViewController: WKNavigationDelegate {
     
-    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         print(error.localizedDescription)
     }
     
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         print("Start loading")
     }
     
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("Finish loading")
     }
     
