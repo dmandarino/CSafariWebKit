@@ -40,28 +40,28 @@ extension WebViewController: WebViewControllerProtocol {
     
     public func present(url: URL, from previousViewController: UIViewController) {
         present(url: url, from: previousViewController, closeButtonName: nil, buttonSide: .left,
-                barTintColor: nil, tintColor: nil, title: nil, userAgent: "", didClose: nil)
+                barTintColor: nil, tintColor: nil, title: nil, userAgent: "", whenDidClose: nil)
     }
     
     public func present(url: URL, from previousViewController: UIViewController, whenDidClose didClose: (() -> Void)?) {
         present(url: url, from: previousViewController, closeButtonName: nil, buttonSide: .left,
-                barTintColor: nil, tintColor: nil, title: nil, userAgent: "", didClose: didClose)
+                barTintColor: nil, tintColor: nil, title: nil, userAgent: "", whenDidClose: didClose)
     }
     
     public func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
                  barTintColor: UIColor?, tintColor: UIColor?, whenDidClose didClose: (() -> Void)?) {
         present(url: url, from: previousViewController, closeButtonName: closeButtonName, buttonSide: buttonSide,
-                barTintColor: barTintColor, tintColor: tintColor, title: nil, userAgent: "", didClose: didClose)
+                barTintColor: barTintColor, tintColor: tintColor, title: nil, userAgent: "", whenDidClose: didClose)
     }
     
     public func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
                  barTintColor: UIColor?, tintColor: UIColor?, title: String?, whenDidClose didClose: (() -> Void)?) {
         present(url: url, from: previousViewController, closeButtonName: closeButtonName, buttonSide: buttonSide,
-                barTintColor: barTintColor, tintColor: tintColor, title: title, userAgent: "", didClose: didClose)
+                barTintColor: barTintColor, tintColor: tintColor, title: title, userAgent: "", whenDidClose: didClose)
     }
     
     public func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
-                 barTintColor: UIColor?, tintColor: UIColor?, title: String?, userAgent: String, didClose: (() -> Void)?) {
+                 barTintColor: UIColor?, tintColor: UIColor?, title: String?, userAgent: String, whenDidClose didClose: (() -> Void)?) {
         presentWebView(url: url, from: previousViewController, closeButtonName: closeButtonName,
                        barTintColor: barTintColor, tintColor: tintColor, title: title, userAgent: "", didClose: didClose)
         setCloseButton(closeButtonName: closeButtonName, buttonSide: buttonSide)
