@@ -69,7 +69,7 @@ WebView.safari.present(url: url, from: self, dismissButtonStyle: .cancel,
 WebView.safari.present(url: url, from: self, dismissButtonStyle: .cancel,
                  barTintColor: .blue, tintColor: .white, whenDidClose: { doSomething() })
                  
-WebView.safare.present(url: url, from: self, dismissButtonStyle: .cancel,
+WebView.safari.present(url: url, from: self, dismissButtonStyle: .cancel,
                  presentModally: true, barCollapsingEnabled: true, entersReaderIfAvailable: true,
                  barTintColor: .blue, tintColor: .white, whenDidClose: { doSomething() })
 ```
