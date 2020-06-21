@@ -1,0 +1,6 @@
+framework module CSafariWebKit {
+  umbrella header "CSafariWebKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,7 +8,6 @@
 
 import SafariServices
 
-@available(iOS 11.0, *)
 struct SafariConfiguration {
     
     static var entersReaderIfAvailable: Bool = false {

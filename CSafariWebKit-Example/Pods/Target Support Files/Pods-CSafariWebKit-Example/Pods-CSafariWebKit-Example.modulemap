@@ -1,0 +1,6 @@
+framework module Pods_CSafariWebKit_Example {
+  umbrella header "Pods-CSafariWebKit-Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

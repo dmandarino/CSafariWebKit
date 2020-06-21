@@ -17,7 +17,6 @@ public enum DismissButtonStyle {
     /// Dismiss button style will be set as Done
     case done
     
-    @available(iOS 11.0, *)
     public func getStyle() -> SFSafariViewController.DismissButtonStyle {
         switch self {
         case .cancel:

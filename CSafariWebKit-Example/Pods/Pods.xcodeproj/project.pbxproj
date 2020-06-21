@@ -1,0 +1,1036 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F8DA547A4B796313BA7EA0E5022B424 /* WebViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C3968986CEBDB0ECA68B635D172B1B /* WebViewControllerProtocol.swift */; };
+		17D44D46BB5DD3F718800D5AEA47E14F /* Pods-CSafariWebKit-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2739C8DF482A1DC4939C5EC911FEE4E1 /* Pods-CSafariWebKit-Example-dummy.m */; };
+		1AFBB04B37718B37F68E32603E53D920 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		1ECCA271FD17307373F1DC149376F887 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A889087DAAC042AE33FFDB4C210C52 /* WebViewController.swift */; };
+		20D232AD2E9BF7E227104C27C581D6B9 /* WebViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58E72991433F178947D9553234B9C6 /* WebViewProtocol.swift */; };
+		37FB5CC80F2EF31C0A520934C4909A07 /* DismissButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBFFC79274F7C767604C8308A45DA2D /* DismissButtonStyle.swift */; };
+		39917A59564CF99847B2DFFAC61E773D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		3A2BCA9D1B3F31FE5178CA500B1A0608 /* CSafariWebKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D3D2F372AEAC8350C2927F5673D8EBB /* CSafariWebKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FA7A8CD2A59982234CF5BA65FA927D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		7212EB6ABB59F1B2FDC95379EF3C2C23 /* CSafariWebKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62664011DAFB0B7AB54906F9B0B70FC9 /* CSafariWebKit-dummy.m */; };
+		75408245A7D7D1FED5D96C6DC3FA1E19 /* Pods-CSafariWebKit-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E876CB79A91128D48479C8993CF59EA /* Pods-CSafariWebKit-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A5C4BF424AA30F5B95E1F248556F229 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681A4AC7C4D1C61BAE8CBAB9DD08F1BF /* SafariViewController.swift */; };
+		88CD7384F71A3B359C1667BF9B3B1EEB /* Pods-CSafariWebKit-ExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 452CB5EAB157EE18D2C717DA3414862B /* Pods-CSafariWebKit-ExampleTests-dummy.m */; };
+		89AE1E0E2ED621F6214443F2DB3DC11C /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C77E73E639BF35CE28B12EB2307216E4 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94D5465DAF360C3199B08A70719E3979 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC00496FCE32F7EBF4BC0A162C9DDF2E /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-dummy.m */; };
+		95F9444C8BBDA0E71856DBFF574500AD /* Pods-CSafariWebKit-ExampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E17028E8F7EAF1CCAE2C0335335788A /* Pods-CSafariWebKit-ExampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEBABED81D0565D16F275D0B4758315E /* SafariConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D4FB1D0BC33DD7EDE65CB272A10EB7 /* SafariConfiguration.swift */; };
+		B9BC78A5CBF6C0DF665E5EEE01FC5726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		BFB1422BE7110D17D61EA4EA14485C73 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		D08170712E795CFD32ADCA56E425F4B3 /* ButtonSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9391E53A60513583C51FB848E3F2CE7F /* ButtonSide.swift */; };
+		EB48A905B3BCFC7EACD25BF7C6155F18 /* SafariViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E47B08904894AD71580C20E66CE3EE /* SafariViewControllerProtocol.swift */; };
+		ECC4A1587835D04EB9ECE4112602948D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016837BB68C35A707D658DC9AB9F6872 /* WebView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0049B35B434F514BB98F2A4C3C6EC96A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEB2C72DC9364EA2259A834859F1DEA7;
+			remoteInfo = CSafariWebKit;
+		};
+		046055E4A7A4F9D402ADFBA7C01021DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEB2C72DC9364EA2259A834859F1DEA7;
+			remoteInfo = CSafariWebKit;
+		};
+		7F614BC52A5D064D519B18B7B4EF40F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56BAEFC85783323D6166329302574966;
+			remoteInfo = "Pods-CSafariWebKit-Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		016837BB68C35A707D658DC9AB9F6872 /* WebView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebView.swift; path = CSafariWebKit/WebView.swift; sourceTree = "<group>"; };
+		040589D30736E869332AE9B20E4FDDE1 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0E5830EC502C8FDFD512C1E907AEDE1F /* Pods_CSafariWebKit_Example_CSafariWebKit_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CSafariWebKit_Example_CSafariWebKit_ExampleUITests.framework; path = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		101F47DD4B15C5931F5052327ACE5605 /* Pods-CSafariWebKit-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSafariWebKit-Example.release.xcconfig"; sourceTree = "<group>"; };
+		14C3968986CEBDB0ECA68B635D172B1B /* WebViewControllerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewControllerProtocol.swift; sourceTree = "<group>"; };
+		1B867FBE9A65D8B7D875623E3CB0B6FD /* CSafariWebKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CSafariWebKit.modulemap; sourceTree = "<group>"; };
+		1BD400EB392DD2795D2E1923D9D8F219 /* CSafariWebKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CSafariWebKit.debug.xcconfig; sourceTree = "<group>"; };
+		2739C8DF482A1DC4939C5EC911FEE4E1 /* Pods-CSafariWebKit-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CSafariWebKit-Example-dummy.m"; sourceTree = "<group>"; };
+		2A122770AA9F841787E0B9ABEBC68993 /* Pods-CSafariWebKit-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSafariWebKit-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2F35086749542CD7E9C67F868B8BCA86 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-Info.plist"; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3789DDE568859FB470F06A086E9F8AD5 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		41AED04BF818186E6A86209DE2B93D15 /* Pods-CSafariWebKit-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CSafariWebKit-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		452CB5EAB157EE18D2C717DA3414862B /* Pods-CSafariWebKit-ExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CSafariWebKit-ExampleTests-dummy.m"; sourceTree = "<group>"; };
+		4A15FD37349545EDA548C581C64E1D92 /* Pods-CSafariWebKit-Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSafariWebKit-Example-Info.plist"; sourceTree = "<group>"; };
+		4AC2259A38BF0E820EFC35B4C1057A3C /* Pods_CSafariWebKit_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CSafariWebKit_ExampleTests.framework; path = "Pods-CSafariWebKit-ExampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C58E72991433F178947D9553234B9C6 /* WebViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebViewProtocol.swift; path = CSafariWebKit/WebViewProtocol.swift; sourceTree = "<group>"; };
+		4E17028E8F7EAF1CCAE2C0335335788A /* Pods-CSafariWebKit-ExampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CSafariWebKit-ExampleTests-umbrella.h"; sourceTree = "<group>"; };
+		4E876CB79A91128D48479C8993CF59EA /* Pods-CSafariWebKit-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CSafariWebKit-Example-umbrella.h"; sourceTree = "<group>"; };
+		62664011DAFB0B7AB54906F9B0B70FC9 /* CSafariWebKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CSafariWebKit-dummy.m"; sourceTree = "<group>"; };
+		681A4AC7C4D1C61BAE8CBAB9DD08F1BF /* SafariViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
+		692B6F004FF4B5F4E649958E2BE6EE11 /* Pods-CSafariWebKit-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSafariWebKit-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A97A013CD1AEBBF8CCE3A9A70E928A4 /* Pods-CSafariWebKit-ExampleTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSafariWebKit-ExampleTests-Info.plist"; sourceTree = "<group>"; };
+		6BB99FA6536E6F602EC22EC5A10F667F /* CSafariWebKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CSafariWebKit.framework; path = CSafariWebKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72140A3B8356B0F39D83BB486E0C020B /* Pods-CSafariWebKit-ExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CSafariWebKit-ExampleTests.modulemap"; sourceTree = "<group>"; };
+		767C237C00CCB637E8165536E739E3CB /* Pods-CSafariWebKit-ExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSafariWebKit-ExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		77A889087DAAC042AE33FFDB4C210C52 /* WebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		7B3709F5B24BF246A30A1FCC3CDDF9D2 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8009C1D7ECF9F858689FD1FA5720F765 /* CSafariWebKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CSafariWebKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		891E513E3B8FCE8156D3957FE11FCEE9 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-frameworks.sh"; sourceTree = "<group>"; };
+		8B5A4D42C925CC03ABCEAA0E97435EBF /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.modulemap"; sourceTree = "<group>"; };
+		92D2F9A1CEEF9E1ACA19B75872145220 /* CSafariWebKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CSafariWebKit-Info.plist"; sourceTree = "<group>"; };
+		9391E53A60513583C51FB848E3F2CE7F /* ButtonSide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonSide.swift; sourceTree = "<group>"; };
+		94444E8A6A205D18B460BF3624332AD0 /* CSafariWebKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CSafariWebKit.release.xcconfig; sourceTree = "<group>"; };
+		9D3D2F372AEAC8350C2927F5673D8EBB /* CSafariWebKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSafariWebKit-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DC97B8009896CECCA7C51F18E2B2E65 /* CSafariWebKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSafariWebKit-prefix.pch"; sourceTree = "<group>"; };
+		A8CDBB9776FEEC1A7796B35DB218349E /* Pods_CSafariWebKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CSafariWebKit_Example.framework; path = "Pods-CSafariWebKit-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE2789885AE61BBAA0188FC06A8D207 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C297A37BE60A110E624BD96FE402B4D5 /* Pods-CSafariWebKit-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSafariWebKit-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		C43B2A00828819AD7D2EC6ADEE0EAE4F /* Pods-CSafariWebKit-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CSafariWebKit-Example.modulemap"; sourceTree = "<group>"; };
+		C77E73E639BF35CE28B12EB2307216E4 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-umbrella.h"; sourceTree = "<group>"; };
+		CC00496FCE32F7EBF4BC0A162C9DDF2E /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-dummy.m"; sourceTree = "<group>"; };
+		CCBFFC79274F7C767604C8308A45DA2D /* DismissButtonStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DismissButtonStyle.swift; sourceTree = "<group>"; };
+		D2E47B08904894AD71580C20E66CE3EE /* SafariViewControllerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SafariViewControllerProtocol.swift; sourceTree = "<group>"; };
+		D3B3B6CC67147820D5FF057AE5C5A351 /* Pods-CSafariWebKit-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSafariWebKit-Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		D5D4FB1D0BC33DD7EDE65CB272A10EB7 /* SafariConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SafariConfiguration.swift; sourceTree = "<group>"; };
+		EDD5E046B615D2AAE7881C2666B9F718 /* Pods-CSafariWebKit-ExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CSafariWebKit-ExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F2156F6644D4FD8CC8EEC7D601C6C375 /* Pods-CSafariWebKit-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CSafariWebKit-Example-frameworks.sh"; sourceTree = "<group>"; };
+		FF5CEB537CDFFCB9F0FC708D1FFB4DF6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0D4ABEAD8FEF22AB48F8C50CC87DB9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39917A59564CF99847B2DFFAC61E773D /* Foundation.framework in Frameworks */,
+				BFB1422BE7110D17D61EA4EA14485C73 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE517796BC0660209E0A614B80542D68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AFBB04B37718B37F68E32603E53D920 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF80F4A4DA8D672BA7825789C72F939D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FA7A8CD2A59982234CF5BA65FA927D1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15B5CFCC8560C8A94EAB892988E4F41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9BC78A5CBF6C0DF665E5EEE01FC5726 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18CE61CF41B225881587C619BA6DC049 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B867FBE9A65D8B7D875623E3CB0B6FD /* CSafariWebKit.modulemap */,
+				62664011DAFB0B7AB54906F9B0B70FC9 /* CSafariWebKit-dummy.m */,
+				92D2F9A1CEEF9E1ACA19B75872145220 /* CSafariWebKit-Info.plist */,
+				9DC97B8009896CECCA7C51F18E2B2E65 /* CSafariWebKit-prefix.pch */,
+				9D3D2F372AEAC8350C2927F5673D8EBB /* CSafariWebKit-umbrella.h */,
+				1BD400EB392DD2795D2E1923D9D8F219 /* CSafariWebKit.debug.xcconfig */,
+				94444E8A6A205D18B460BF3624332AD0 /* CSafariWebKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "CSafariWebKit-Example/Pods/Target Support Files/CSafariWebKit";
+			sourceTree = "<group>";
+		};
+		1BDD2C62794E920CC428286985A8AF58 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8009C1D7ECF9F858689FD1FA5720F765 /* CSafariWebKit.podspec */,
+				FF5CEB537CDFFCB9F0FC708D1FFB4DF6 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		1F290FBE65FCA92739E027FC9BF9CBC6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8571E0411DFCAD60A9B41A286AF0CD1 /* CSafariWebKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		264005DEF6C55179C722DC89B7320005 /* Pods-CSafariWebKit-Example */ = {
+			isa = PBXGroup;
+			children = (
+				C43B2A00828819AD7D2EC6ADEE0EAE4F /* Pods-CSafariWebKit-Example.modulemap */,
+				41AED04BF818186E6A86209DE2B93D15 /* Pods-CSafariWebKit-Example-acknowledgements.markdown */,
+				D3B3B6CC67147820D5FF057AE5C5A351 /* Pods-CSafariWebKit-Example-acknowledgements.plist */,
+				2739C8DF482A1DC4939C5EC911FEE4E1 /* Pods-CSafariWebKit-Example-dummy.m */,
+				F2156F6644D4FD8CC8EEC7D601C6C375 /* Pods-CSafariWebKit-Example-frameworks.sh */,
+				4A15FD37349545EDA548C581C64E1D92 /* Pods-CSafariWebKit-Example-Info.plist */,
+				4E876CB79A91128D48479C8993CF59EA /* Pods-CSafariWebKit-Example-umbrella.h */,
+				2A122770AA9F841787E0B9ABEBC68993 /* Pods-CSafariWebKit-Example.debug.xcconfig */,
+				101F47DD4B15C5931F5052327ACE5605 /* Pods-CSafariWebKit-Example.release.xcconfig */,
+			);
+			name = "Pods-CSafariWebKit-Example";
+			path = "Target Support Files/Pods-CSafariWebKit-Example";
+			sourceTree = "<group>";
+		};
+		31869F295045A970E869CA68F2D830C4 /* SafariViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CCBFFC79274F7C767604C8308A45DA2D /* DismissButtonStyle.swift */,
+				D5D4FB1D0BC33DD7EDE65CB272A10EB7 /* SafariConfiguration.swift */,
+				681A4AC7C4D1C61BAE8CBAB9DD08F1BF /* SafariViewController.swift */,
+				D2E47B08904894AD71580C20E66CE3EE /* SafariViewControllerProtocol.swift */,
+			);
+			name = SafariViewController;
+			path = CSafariWebKit/SafariViewController;
+			sourceTree = "<group>";
+		};
+		872628DDD3C85BB8072AABDD1484FBBF /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8B5A4D42C925CC03ABCEAA0E97435EBF /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.modulemap */,
+				040589D30736E869332AE9B20E4FDDE1 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-acknowledgements.markdown */,
+				ADE2789885AE61BBAA0188FC06A8D207 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-acknowledgements.plist */,
+				CC00496FCE32F7EBF4BC0A162C9DDF2E /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-dummy.m */,
+				891E513E3B8FCE8156D3957FE11FCEE9 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-frameworks.sh */,
+				2F35086749542CD7E9C67F868B8BCA86 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-Info.plist */,
+				C77E73E639BF35CE28B12EB2307216E4 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-umbrella.h */,
+				7B3709F5B24BF246A30A1FCC3CDDF9D2 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.debug.xcconfig */,
+				3789DDE568859FB470F06A086E9F8AD5 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.release.xcconfig */,
+			);
+			name = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests";
+			path = "Target Support Files/Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests";
+			sourceTree = "<group>";
+		};
+		AD1A369BBEF1B4330039B19060860A89 /* Pods-CSafariWebKit-ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				72140A3B8356B0F39D83BB486E0C020B /* Pods-CSafariWebKit-ExampleTests.modulemap */,
+				EDD5E046B615D2AAE7881C2666B9F718 /* Pods-CSafariWebKit-ExampleTests-acknowledgements.markdown */,
+				767C237C00CCB637E8165536E739E3CB /* Pods-CSafariWebKit-ExampleTests-acknowledgements.plist */,
+				452CB5EAB157EE18D2C717DA3414862B /* Pods-CSafariWebKit-ExampleTests-dummy.m */,
+				6A97A013CD1AEBBF8CCE3A9A70E928A4 /* Pods-CSafariWebKit-ExampleTests-Info.plist */,
+				4E17028E8F7EAF1CCAE2C0335335788A /* Pods-CSafariWebKit-ExampleTests-umbrella.h */,
+				692B6F004FF4B5F4E649958E2BE6EE11 /* Pods-CSafariWebKit-ExampleTests.debug.xcconfig */,
+				C297A37BE60A110E624BD96FE402B4D5 /* Pods-CSafariWebKit-ExampleTests.release.xcconfig */,
+			);
+			name = "Pods-CSafariWebKit-ExampleTests";
+			path = "Target Support Files/Pods-CSafariWebKit-ExampleTests";
+			sourceTree = "<group>";
+		};
+		B01F1FB3596E1FA8A486CEB4CCA436D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BB99FA6536E6F602EC22EC5A10F667F /* CSafariWebKit.framework */,
+				A8CDBB9776FEEC1A7796B35DB218349E /* Pods_CSafariWebKit_Example.framework */,
+				0E5830EC502C8FDFD512C1E907AEDE1F /* Pods_CSafariWebKit_Example_CSafariWebKit_ExampleUITests.framework */,
+				4AC2259A38BF0E820EFC35B4C1057A3C /* Pods_CSafariWebKit_ExampleTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C47DC5AA00BE6063265E95CC9B932204 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				264005DEF6C55179C722DC89B7320005 /* Pods-CSafariWebKit-Example */,
+				872628DDD3C85BB8072AABDD1484FBBF /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests */,
+				AD1A369BBEF1B4330039B19060860A89 /* Pods-CSafariWebKit-ExampleTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1F290FBE65FCA92739E027FC9BF9CBC6 /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				B01F1FB3596E1FA8A486CEB4CCA436D3 /* Products */,
+				C47DC5AA00BE6063265E95CC9B932204 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E74CAE9D323F6A20B6FE5A455C6C1377 /* WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				9391E53A60513583C51FB848E3F2CE7F /* ButtonSide.swift */,
+				77A889087DAAC042AE33FFDB4C210C52 /* WebViewController.swift */,
+				14C3968986CEBDB0ECA68B635D172B1B /* WebViewControllerProtocol.swift */,
+			);
+			name = WKWebView;
+			path = CSafariWebKit/WKWebView;
+			sourceTree = "<group>";
+		};
+		F8571E0411DFCAD60A9B41A286AF0CD1 /* CSafariWebKit */ = {
+			isa = PBXGroup;
+			children = (
+				016837BB68C35A707D658DC9AB9F6872 /* WebView.swift */,
+				4C58E72991433F178947D9553234B9C6 /* WebViewProtocol.swift */,
+				1BDD2C62794E920CC428286985A8AF58 /* Pod */,
+				31869F295045A970E869CA68F2D830C4 /* SafariViewController */,
+				18CE61CF41B225881587C619BA6DC049 /* Support Files */,
+				E74CAE9D323F6A20B6FE5A455C6C1377 /* WKWebView */,
+			);
+			name = CSafariWebKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3BF1808CBBE30186B02E18AEF27836E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F9444C8BBDA0E71856DBFF574500AD /* Pods-CSafariWebKit-ExampleTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ADCB99ADFD7D2DB2D67D7C1BAC089DB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2BCA9D1B3F31FE5178CA500B1A0608 /* CSafariWebKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A725B161FA839252842E92D57AA93FBC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75408245A7D7D1FED5D96C6DC3FA1E19 /* Pods-CSafariWebKit-Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24337FDC4E4BC10D7CB95ED60DCF701 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89AE1E0E2ED621F6214443F2DB3DC11C /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		56BAEFC85783323D6166329302574966 /* Pods-CSafariWebKit-Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE339B55FD29DF7E062987B00FE38F5A /* Build configuration list for PBXNativeTarget "Pods-CSafariWebKit-Example" */;
+			buildPhases = (
+				A725B161FA839252842E92D57AA93FBC /* Headers */,
+				327F56E60C8377FCB0FE84AF44B529F7 /* Sources */,
+				F15B5CFCC8560C8A94EAB892988E4F41 /* Frameworks */,
+				3E1A31027EA38BBF4583EBA432213FCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31AE6F4F7B0D4717BCDA34CB0777B288 /* PBXTargetDependency */,
+			);
+			name = "Pods-CSafariWebKit-Example";
+			productName = "Pods-CSafariWebKit-Example";
+			productReference = A8CDBB9776FEEC1A7796B35DB218349E /* Pods_CSafariWebKit_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		845852748A84FAB4B028961E6B0A41D0 /* Pods-CSafariWebKit-ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87ADA3E08252CD3D03A1598924FD2E8D /* Build configuration list for PBXNativeTarget "Pods-CSafariWebKit-ExampleTests" */;
+			buildPhases = (
+				3BF1808CBBE30186B02E18AEF27836E4 /* Headers */,
+				4190E7517DAF2F6583170E3F4919162A /* Sources */,
+				BE517796BC0660209E0A614B80542D68 /* Frameworks */,
+				4F143AE1A3F626375EFAC5FEBCFBB4D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3227481EA7024DB24EE6EF3FA6E96E99 /* PBXTargetDependency */,
+			);
+			name = "Pods-CSafariWebKit-ExampleTests";
+			productName = "Pods-CSafariWebKit-ExampleTests";
+			productReference = 4AC2259A38BF0E820EFC35B4C1057A3C /* Pods_CSafariWebKit_ExampleTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BEB2C72DC9364EA2259A834859F1DEA7 /* CSafariWebKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7086CF798A00FD66B296CB55A290E42 /* Build configuration list for PBXNativeTarget "CSafariWebKit" */;
+			buildPhases = (
+				7ADCB99ADFD7D2DB2D67D7C1BAC089DB /* Headers */,
+				2E5676A84C0F8974A73FE637267F8195 /* Sources */,
+				A0D4ABEAD8FEF22AB48F8C50CC87DB9A /* Frameworks */,
+				31CD0BFD4D2C4FA8F30D5DA8FD37CEA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSafariWebKit;
+			productName = CSafariWebKit;
+			productReference = 6BB99FA6536E6F602EC22EC5A10F667F /* CSafariWebKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C89A019B7866868C34940DAE59E87FEA /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39A5CA7F58101405CB94DCC42228B744 /* Build configuration list for PBXNativeTarget "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests" */;
+			buildPhases = (
+				F24337FDC4E4BC10D7CB95ED60DCF701 /* Headers */,
+				158CB5380E0EEC7FF5CD216F41E0AF07 /* Sources */,
+				EF80F4A4DA8D672BA7825789C72F939D /* Frameworks */,
+				5D51EA02F741C29428DD980F265AB9F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7E232FFA4A3FDCD7D1AB07EE593D325 /* PBXTargetDependency */,
+			);
+			name = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests";
+			productName = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests";
+			productReference = 0E5830EC502C8FDFD512C1E907AEDE1F /* Pods_CSafariWebKit_Example_CSafariWebKit_ExampleUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = B01F1FB3596E1FA8A486CEB4CCA436D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEB2C72DC9364EA2259A834859F1DEA7 /* CSafariWebKit */,
+				56BAEFC85783323D6166329302574966 /* Pods-CSafariWebKit-Example */,
+				C89A019B7866868C34940DAE59E87FEA /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests */,
+				845852748A84FAB4B028961E6B0A41D0 /* Pods-CSafariWebKit-ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31CD0BFD4D2C4FA8F30D5DA8FD37CEA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E1A31027EA38BBF4583EBA432213FCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F143AE1A3F626375EFAC5FEBCFBB4D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D51EA02F741C29428DD980F265AB9F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		158CB5380E0EEC7FF5CD216F41E0AF07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D5465DAF360C3199B08A70719E3979 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E5676A84C0F8974A73FE637267F8195 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08170712E795CFD32ADCA56E425F4B3 /* ButtonSide.swift in Sources */,
+				7212EB6ABB59F1B2FDC95379EF3C2C23 /* CSafariWebKit-dummy.m in Sources */,
+				37FB5CC80F2EF31C0A520934C4909A07 /* DismissButtonStyle.swift in Sources */,
+				AEBABED81D0565D16F275D0B4758315E /* SafariConfiguration.swift in Sources */,
+				7A5C4BF424AA30F5B95E1F248556F229 /* SafariViewController.swift in Sources */,
+				EB48A905B3BCFC7EACD25BF7C6155F18 /* SafariViewControllerProtocol.swift in Sources */,
+				ECC4A1587835D04EB9ECE4112602948D /* WebView.swift in Sources */,
+				1ECCA271FD17307373F1DC149376F887 /* WebViewController.swift in Sources */,
+				0F8DA547A4B796313BA7EA0E5022B424 /* WebViewControllerProtocol.swift in Sources */,
+				20D232AD2E9BF7E227104C27C581D6B9 /* WebViewProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		327F56E60C8377FCB0FE84AF44B529F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17D44D46BB5DD3F718800D5AEA47E14F /* Pods-CSafariWebKit-Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4190E7517DAF2F6583170E3F4919162A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88CD7384F71A3B359C1667BF9B3B1EEB /* Pods-CSafariWebKit-ExampleTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31AE6F4F7B0D4717BCDA34CB0777B288 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CSafariWebKit;
+			target = BEB2C72DC9364EA2259A834859F1DEA7 /* CSafariWebKit */;
+			targetProxy = 0049B35B434F514BB98F2A4C3C6EC96A /* PBXContainerItemProxy */;
+		};
+		3227481EA7024DB24EE6EF3FA6E96E99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-CSafariWebKit-Example";
+			target = 56BAEFC85783323D6166329302574966 /* Pods-CSafariWebKit-Example */;
+			targetProxy = 7F614BC52A5D064D519B18B7B4EF40F4 /* PBXContainerItemProxy */;
+		};
+		A7E232FFA4A3FDCD7D1AB07EE593D325 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CSafariWebKit;
+			target = BEB2C72DC9364EA2259A834859F1DEA7 /* CSafariWebKit */;
+			targetProxy = 046055E4A7A4F9D402ADFBA7C01021DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2968D2CC6556690A06D1D8FC76B76FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 101F47DD4B15C5931F5052327ACE5605 /* Pods-CSafariWebKit-Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CSafariWebKit-Example/Pods-CSafariWebKit-Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CSafariWebKit-Example/Pods-CSafariWebKit-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3E0F8CBE1E820B6A68DCB8544F8B7900 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94444E8A6A205D18B460BF3624332AD0 /* CSafariWebKit.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CSafariWebKit/CSafariWebKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CSafariWebKit/CSafariWebKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CSafariWebKit/CSafariWebKit.modulemap";
+				PRODUCT_MODULE_NAME = CSafariWebKit;
+				PRODUCT_NAME = CSafariWebKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3E7C67898912CFF859F4B2BF53B1722D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B3709F5B24BF246A30A1FCC3CDDF9D2 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests/Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests/Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74413DCC0DFFB257025A7D964B377C50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A122770AA9F841787E0B9ABEBC68993 /* Pods-CSafariWebKit-Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CSafariWebKit-Example/Pods-CSafariWebKit-Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CSafariWebKit-Example/Pods-CSafariWebKit-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7CA136AA79CE0EC9359E24BE604C5A1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD400EB392DD2795D2E1923D9D8F219 /* CSafariWebKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CSafariWebKit/CSafariWebKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CSafariWebKit/CSafariWebKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CSafariWebKit/CSafariWebKit.modulemap";
+				PRODUCT_MODULE_NAME = CSafariWebKit;
+				PRODUCT_NAME = CSafariWebKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9DB29559CB323C48B1EEA29EB3DA0EAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C297A37BE60A110E624BD96FE402B4D5 /* Pods-CSafariWebKit-ExampleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CSafariWebKit-ExampleTests/Pods-CSafariWebKit-ExampleTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CSafariWebKit-ExampleTests/Pods-CSafariWebKit-ExampleTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D11C3C76BCB5376DA1E826BE53301D7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 692B6F004FF4B5F4E649958E2BE6EE11 /* Pods-CSafariWebKit-ExampleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CSafariWebKit-ExampleTests/Pods-CSafariWebKit-ExampleTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CSafariWebKit-ExampleTests/Pods-CSafariWebKit-ExampleTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EF4962CB4621F88C00DC260048A1D0BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3789DDE568859FB470F06A086E9F8AD5 /* Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests/Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests/Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39A5CA7F58101405CB94DCC42228B744 /* Build configuration list for PBXNativeTarget "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E7C67898912CFF859F4B2BF53B1722D /* Debug */,
+				EF4962CB4621F88C00DC260048A1D0BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87ADA3E08252CD3D03A1598924FD2E8D /* Build configuration list for PBXNativeTarget "Pods-CSafariWebKit-ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D11C3C76BCB5376DA1E826BE53301D7F /* Debug */,
+				9DB29559CB323C48B1EEA29EB3DA0EAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7086CF798A00FD66B296CB55A290E42 /* Build configuration list for PBXNativeTarget "CSafariWebKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CA136AA79CE0EC9359E24BE604C5A1B /* Debug */,
+				3E0F8CBE1E820B6A68DCB8544F8B7900 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE339B55FD29DF7E062987B00FE38F5A /* Build configuration list for PBXNativeTarget "Pods-CSafariWebKit-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74413DCC0DFFB257025A7D964B377C50 /* Debug */,
+				2968D2CC6556690A06D1D8FC76B76FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

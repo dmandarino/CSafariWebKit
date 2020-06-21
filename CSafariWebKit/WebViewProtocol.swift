@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol WebViewProtocol {
+public protocol WebViewProtocol {
     static var wkWebView: WebViewControllerProtocol { get }
     static var safari: SafariViewControllerProtocol { get }
 }

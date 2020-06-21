@@ -67,11 +67,6 @@ public protocol SafariViewControllerProtocol {
      
      If you don't set any color for *barTintColor* or *tintColor*, it will use the same colors from previous NavigationBar or default color.
      
-     - Attention: Some properties only apply for SDK: iOS 11.0+
-     - entersReaderIfAvailable
-     - barCollapsingEnabled
-     - dismissButtonStyle
-     
      - Parameters:
      - url: The URL to be loaded.
      - previousViewController: The ViewController that will present the Browser.

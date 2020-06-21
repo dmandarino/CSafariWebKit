@@ -1,0 +1,16 @@
+PODS:
+  - CSafariWebKit (1.0.3)
+
+DEPENDENCIES:
+  - CSafariWebKit (from `../`)
+
+EXTERNAL SOURCES:
+  CSafariWebKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CSafariWebKit: 32c705d022fc2266e358fa6520b3f2a9d7347f78
+
+PODFILE CHECKSUM: 7cb01c3a2b8cba525e622aecb42df2eee7b784b6
+
+COCOAPODS: 1.9.3

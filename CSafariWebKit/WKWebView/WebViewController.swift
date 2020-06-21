@@ -54,14 +54,27 @@ extension WebViewController: WebViewControllerProtocol {
                 barTintColor: barTintColor, tintColor: tintColor, title: nil, userAgent: "", whenDidClose: didClose)
     }
     
-    public func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
-                 barTintColor: UIColor?, tintColor: UIColor?, title: String?, whenDidClose didClose: (() -> Void)?) {
+    public func present(url: URL,
+                        from previousViewController: UIViewController,
+                        closeButtonName: String?,
+                        buttonSide: ButtonSide,
+                        barTintColor: UIColor?,
+                        tintColor: UIColor?,
+                        title: String?,
+                        whenDidClose didClose: (() -> Void)?) {
         present(url: url, from: previousViewController, closeButtonName: closeButtonName, buttonSide: buttonSide,
                 barTintColor: barTintColor, tintColor: tintColor, title: title, userAgent: "", whenDidClose: didClose)
     }
-    
-    public func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?, buttonSide: ButtonSide,
-                 barTintColor: UIColor?, tintColor: UIColor?, title: String?, userAgent: String, whenDidClose didClose: (() -> Void)?) {
+        
+    public func present(url: URL,
+                        from previousViewController: UIViewController,
+                        closeButtonName: String? = nil,
+                        buttonSide: ButtonSide = .left,
+                        barTintColor: UIColor? = nil,
+                        tintColor: UIColor? = nil,
+                        title: String? = nil,
+                        userAgent: String = "",
+                        whenDidClose didClose: (() -> Void)? = nil) {
         presentWebView(url: url, from: previousViewController, closeButtonName: closeButtonName,
                        barTintColor: barTintColor, tintColor: tintColor, title: title, userAgent: "", didClose: didClose)
         setCloseButton(closeButtonName: closeButtonName, buttonSide: buttonSide)
@@ -81,7 +94,7 @@ extension WebViewController: WebViewControllerProtocol {
         navController = UINavigationController(rootViewController: self)
         navController.navigationBar.barTintColor = barTintColor ?? previousViewController.navigationController?.navigationBar.barTintColor
         navController.navigationBar.tintColor = tintColor ?? previousViewController.navigationController?.navigationBar.tintColor
-        navController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: tintColor ?? .black]
+        navController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: tintColor ?? .black]
         navController.navigationBar.topItem?.title = title
     }
     

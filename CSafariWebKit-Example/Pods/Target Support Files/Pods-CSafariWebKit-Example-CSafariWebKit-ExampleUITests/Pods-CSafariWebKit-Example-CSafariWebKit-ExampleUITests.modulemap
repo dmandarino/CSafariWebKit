@@ -1,0 +1,6 @@
+framework module Pods_CSafariWebKit_Example_CSafariWebKit_ExampleUITests {
+  umbrella header "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
