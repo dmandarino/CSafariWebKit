@@ -35,7 +35,9 @@ public protocol SafariViewControllerProtocol {
      - previousViewController: The ViewController that will present the Browser.
      - whenDidClose: A method used as a callback when the user closes the Browser.
      */
-    func present(url: URL, from previousViewController: UIViewController, whenDidClose didClose: (() -> Void)?)
+    func present(url: URL,
+                 from previousViewController: UIViewController,
+                 whenDidClose didClose: (() -> Void)?)
     /**
      Present SFSafariViewController from the previous ViewController.
      
@@ -45,7 +47,9 @@ public protocol SafariViewControllerProtocol {
      - dismissButtonStyle: Indicates which button should be shown in SafariViewController to close it.
      - whenDidClose: A method used as a callback when the user closes the Browser.
      */
-    func present(url: URL, from previousViewController: UIViewController, dismissButtonStyle: DismissButtonStyle,
+    func present(url: URL,
+                 from previousViewController: UIViewController,
+                 dismissButtonStyle: DismissButtonStyle,
                  whenDidClose didClose: (() -> Void)?)
     /**
      Present SFSafariViewController from the previous ViewController.
@@ -60,8 +64,12 @@ public protocol SafariViewControllerProtocol {
      - tintColor: The tint color to apply to the navigation items and bar button items.
      - whenDidClose: A method used as a callback when the user closes the Browser.
      */
-    func present(url: URL, from previousViewController: UIViewController, dismissButtonStyle: DismissButtonStyle,
-                 barTintColor: UIColor?, tintColor: UIColor?, whenDidClose didClose: (() -> Void)?)
+    func present(url: URL,
+                 from previousViewController: UIViewController,
+                 dismissButtonStyle: DismissButtonStyle,
+                 barTintColor: UIColor?,
+                 tintColor: UIColor?,
+                 whenDidClose didClose: (() -> Void)?)
     /**
      Present SFSafariViewController from the previous ViewController.
      
@@ -78,7 +86,13 @@ public protocol SafariViewControllerProtocol {
      - tintColor: The tint color to apply to the navigation items and bar button items.
      - whenDidClose: A method used as a callback when the user closes the Browser.
      */
-    func present(url: URL, from previousViewController: UIViewController, dismissButtonStyle: DismissButtonStyle,
-                 presentModally: Bool, barCollapsingEnabled: Bool, entersReaderIfAvailable: Bool,
-                 barTintColor: UIColor?, tintColor: UIColor?, whenDidClose didClose: (() -> Void)?)
+    func present(url: URL,
+                 from previousViewController: UIViewController,
+                 dismissButtonStyle: DismissButtonStyle,
+                 presentModally: Bool,
+                 barCollapsingEnabled: Bool,
+                 entersReaderIfAvailable: Bool,
+                 barTintColor: UIColor?,
+                 tintColor: UIColor?,
+                 whenDidClose didClose: (() -> Void)?)
 }

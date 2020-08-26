@@ -40,7 +40,9 @@ public protocol WebViewControllerProtocol {
      - previousViewController: The ViewController that will present the Browser.
      - whenDidClose: A method used as a callback when the user closes the Browser.
      */
-    func present(url: URL, from previousViewController: UIViewController, whenDidClose didClose: (() -> Void)?)
+    func present(url: URL,
+                 from previousViewController: UIViewController,
+                 whenDidClose didClose: (() -> Void)?)
     /**
      Present WKWebView from the previous ViewController.
      
@@ -55,8 +57,13 @@ public protocol WebViewControllerProtocol {
      - tintColor: The tint color to apply to the navigation items and bar button items.
      - whenDidClose: A method used as a callback when the user closes the Browser.
      */
-    func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?,
-                 buttonSide: ButtonSide, barTintColor: UIColor?, tintColor: UIColor?, whenDidClose didClose: (() -> Void)?)
+    func present(url: URL,
+                 from previousViewController: UIViewController,
+                 closeButtonName: String?,
+                 buttonSide: ButtonSide,
+                 barTintColor: UIColor?,
+                 tintColor: UIColor?,
+                 whenDidClose didClose: (() -> Void)?)
     /**
      Present WKWebView from the previous ViewController.
      
@@ -72,8 +79,13 @@ public protocol WebViewControllerProtocol {
      - title: Set a title for NavigationBar
      - whenDidClose: A method used as a callback when the user closes the Browser.
      */
-    func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?,
-                 buttonSide: ButtonSide, barTintColor: UIColor?, tintColor: UIColor?, title: String?,
+    func present(url: URL,
+                 from previousViewController: UIViewController,
+                 closeButtonName: String?,
+                 buttonSide: ButtonSide,
+                 barTintColor: UIColor?,
+                 tintColor: UIColor?,
+                 title: String?,
                  whenDidClose didClose: (() -> Void)?)
     /**
      Present WKWebView from the previous ViewController.
@@ -91,7 +103,13 @@ public protocol WebViewControllerProtocol {
      - userAgent: Append a UserAgent to your WebView
      - whenDidClose: A method used as a callback when the user closes the Browser.
      */
-    func present(url: URL, from previousViewController: UIViewController, closeButtonName: String?,
-                 buttonSide: ButtonSide,  barTintColor: UIColor?, tintColor: UIColor?, title: String?,
-                 userAgent: String, whenDidClose didClose: (() -> Void)?)
+    func present(url: URL,
+                 from previousViewController: UIViewController,
+                 closeButtonName: String?,
+                 buttonSide: ButtonSide,
+                 barTintColor: UIColor?,
+                 tintColor: UIColor?,
+                 title: String?,
+                 userAgent: String,
+                 whenDidClose didClose: (() -> Void)?)
 }
