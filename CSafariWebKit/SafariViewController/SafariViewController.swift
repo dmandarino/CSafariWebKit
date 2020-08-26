@@ -46,29 +46,26 @@ extension SafariViewController: SafariViewControllerProtocol {
     
     public func present(url: URL,
                         from previousViewController: UIViewController) {
-        present(url: url, from: previousViewController, dismissButtonStyle: self.dismissButtonStyle,
-                presentModally: self.presentModally, barCollapsingEnabled: self.barCollapsingEnabled,
-                entersReaderIfAvailable: self.entersReaderIfAvailable,
-                barTintColor: nil, tintColor: nil, whenDidClose: nil)
+        presentSafariViewController(url: url,
+                                    from: previousViewController)
     }
     
     public func present(url: URL,
                         from previousViewController: UIViewController,
                         whenDidClose didClose: (() -> Void)?) {
-        present(url: url, from: previousViewController, dismissButtonStyle: self.dismissButtonStyle,
-                presentModally: self.presentModally, barCollapsingEnabled: self.barCollapsingEnabled,
-                entersReaderIfAvailable: self.entersReaderIfAvailable,
-                barTintColor: nil, tintColor: nil, whenDidClose: didClose)
+        presentSafariViewController(url: url,
+                                    from: previousViewController,
+                                    whenDidClose: didClose)
     }
     
     public func present(url: URL,
                         from previousViewController: UIViewController,
                         dismissButtonStyle: DismissButtonStyle,
                         whenDidClose didClose: (() -> Void)?) {
-        present(url: url, from: previousViewController, dismissButtonStyle: dismissButtonStyle,
-                presentModally: self.presentModally, barCollapsingEnabled: self.barCollapsingEnabled,
-                entersReaderIfAvailable: self.entersReaderIfAvailable,
-                barTintColor: nil, tintColor: nil, whenDidClose: didClose)
+        presentSafariViewController(url: url,
+                                    from: previousViewController,
+                                    dismissButtonStyle: dismissButtonStyle,
+                                    whenDidClose: didClose)
     }
     
     public func present(url: URL,
@@ -77,10 +74,12 @@ extension SafariViewController: SafariViewControllerProtocol {
                         barTintColor: UIColor?,
                         tintColor: UIColor?,
                         whenDidClose didClose: (() -> Void)?) {
-        present(url: url, from: previousViewController, dismissButtonStyle: dismissButtonStyle,
-                presentModally: self.presentModally, barCollapsingEnabled: self.barCollapsingEnabled,
-                entersReaderIfAvailable: self.entersReaderIfAvailable,
-                barTintColor: barTintColor, tintColor: tintColor, whenDidClose: didClose)
+        presentSafariViewController(url: url,
+                                    from: previousViewController,
+                                    dismissButtonStyle: dismissButtonStyle,
+                                    barTintColor: barTintColor,
+                                    tintColor: tintColor,
+                                    whenDidClose: didClose)
     }
     
     public func present(url: URL,
@@ -126,7 +125,7 @@ extension SafariViewController: SafariViewControllerProtocol {
                                           presentModally: Bool,
                                           barCollapsingEnabled: Bool,
                                           entersReaderIfAvailable: Bool) {
-        self.safariViewController?.delegate = self
+        self.safariViewController.delegate = self
         self.entersReaderIfAvailable = entersReaderIfAvailable
         self.dismissButtonStyle = dismissButtonStyle
         self.barCollapsingEnabled = barCollapsingEnabled
@@ -139,15 +138,19 @@ extension SafariViewController: SafariViewControllerProtocol {
     }
     
     private func presentSafariViewController(previousViewController: UIViewController) {
-        previousViewController.present(safariViewController, animated: true, completion: nil)
-        previousViewController.present(self, animated: true, completion: nil)
+        previousViewController.addChild(self)
+        self.present(safariViewController, animated: true, completion: nil)
     }
     
     private func setupColors(from previousViewController: UIViewController,
                              barTintColor: UIColor?,
                              tintColor: UIColor?) {
-        safariViewController?.preferredBarTintColor = barTintColor ?? previousViewController.navigationController?.navigationBar.barTintColor
-        safariViewController?.preferredControlTintColor = tintColor ?? previousViewController.navigationController?.navigationBar.tintColor
+        let navBar = previousViewController.navigationController?.navigationBar
+        let colorKey = NSAttributedString.Key.foregroundColor
+        let previousTintColor = navBar?.titleTextAttributes?[colorKey] as? UIColor
+        
+        safariViewController.preferredBarTintColor = barTintColor ?? navBar?.barTintColor
+        safariViewController.preferredControlTintColor = tintColor ?? previousTintColor
     }
 }
 

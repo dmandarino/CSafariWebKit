@@ -43,21 +43,10 @@ extension SafariListViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         let labels: [String.SubSequence]
         labels = self.options[indexPath.row].name.split(separator: ":")
-        
         cell.textLabel?.text = String(labels.first!)
-        guard let detail = labels.last else {
-            return cell
-        }
-        
-        cell.detailTextLabel?.text = String(detail)
-        
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.options[section].name
-    }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.options[indexPath.row].action()
         tableView.deselectRow(at: indexPath, animated: true)
