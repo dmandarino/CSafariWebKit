@@ -1,5 +1,6 @@
 CSafariWebKit.xcodeproj/project.xcworkspace/xcuserdata/*
 CSafariWebKit.xcodeproj/xcuserdata/*
 Pods/*
+Pods/**
 CSafariWebKit.xcworkspace/*
 **/*.xcuserstate

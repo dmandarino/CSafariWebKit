@@ -56,8 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E5830EC502C8FDFD512C1E907AEDE1F /* Pods_CSafariWebKit_Example_CSafariWebKit_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSafariWebKit_Example_CSafariWebKit_ExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46EB2E000000C0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0E5830EC502C8FDFD512C1E907AEDE1F /* Pods_CSafariWebKit_Example_CSafariWebKit_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CSafariWebKit_Example_CSafariWebKit_ExampleUITests.framework; path = "Pods-CSafariWebKit-Example-CSafariWebKit-ExampleUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB2E000000C0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		46EB2E000000E0 /* DismissButtonStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DismissButtonStyle.swift; sourceTree = "<group>"; };
 		46EB2E000000F0 /* SafariConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SafariConfiguration.swift; sourceTree = "<group>"; };
 		46EB2E00000100 /* SafariViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
@@ -67,8 +67,8 @@
 		46EB2E00000150 /* ButtonSide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonSide.swift; sourceTree = "<group>"; };
 		46EB2E00000160 /* WebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		46EB2E00000170 /* WebViewControllerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewControllerProtocol.swift; sourceTree = "<group>"; };
-		46EB2E00000190 /* CSafariWebKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CSafariWebKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		46EB2E000001A0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		46EB2E00000190 /* CSafariWebKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CSafariWebKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		46EB2E000001A0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		46EB2E00000250 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		46EB2E00000310 /* CSafariWebKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CSafariWebKit.debug.xcconfig; sourceTree = "<group>"; };
 		46EB2E00000320 /* CSafariWebKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CSafariWebKit.release.xcconfig; sourceTree = "<group>"; };
@@ -104,9 +104,9 @@
 		46EB2E00000790 /* Pods-CSafariWebKit-ExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSafariWebKit-ExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		46EB2E000007A0 /* Pods-CSafariWebKit-ExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CSafariWebKit-ExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		46EB2E000007B0 /* Pods-CSafariWebKit-ExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CSafariWebKit-ExampleTests-dummy.m"; sourceTree = "<group>"; };
-		4AC2259A38BF0E820EFC35B4C1057A3C /* Pods_CSafariWebKit_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSafariWebKit_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BB99FA6536E6F602EC22EC5A10F667F /* CSafariWebKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSafariWebKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8CDBB9776FEEC1A7796B35DB218349E /* Pods_CSafariWebKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSafariWebKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AC2259A38BF0E820EFC35B4C1057A3C /* Pods_CSafariWebKit_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CSafariWebKit_ExampleTests.framework; path = "Pods-CSafariWebKit-ExampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BB99FA6536E6F602EC22EC5A10F667F /* CSafariWebKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CSafariWebKit.framework; path = CSafariWebKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8CDBB9776FEEC1A7796B35DB218349E /* Pods_CSafariWebKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CSafariWebKit_Example.framework; path = "Pods-CSafariWebKit-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,8 +201,8 @@
 				46EB2E00000130 /* WebViewProtocol.swift */,
 				46EB2E00000180 /* Pod */,
 				46EB2E000000D0 /* SafariViewController */,
-				46EB2E00000140 /* WKWebView */,
 				46EB2E00000300 /* Support Files */,
+				46EB2E00000140 /* WKWebView */,
 			);
 			name = CSafariWebKit;
 			path = ../..;
