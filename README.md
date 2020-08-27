@@ -12,7 +12,7 @@ It works as a wrapper for [SFSafariViewController](https://developer.apple.com/d
 
 ### Prerequisites
 
-Your app's target should be at least iOS 9.0. And if you are not cloning it, then you will need CocoaPods.
+Your app's target should be at least iOS 11.0. And if you are not cloning it, then you will need CocoaPods.
 
 
 ### Installing
@@ -57,21 +57,34 @@ self.present(vc, animated: true, completion: nil)
 Or you can present it directly from your ViewController
 
 ```swift
-WebView.safari.present(url: url, from: self)
-
-WebView.safari.present(url: url, from: self, whenDidClose: { doSomething() })
-
-WebView.safari.present(url: url, from: self, whenDidClose: { doSomething() })
-
-WebView.safari.present(url: url, from: self, dismissButtonStyle: .cancel,
-                 whenDidClose: { doSomething() })
-                 
-WebView.safari.present(url: url, from: self, dismissButtonStyle: .cancel,
-                 barTintColor: .blue, tintColor: .white, whenDidClose: { doSomething() })
-                 
-WebView.safari.present(url: url, from: self, dismissButtonStyle: .cancel,
-                 presentModally: true, barCollapsingEnabled: true, entersReaderIfAvailable: true,
-                 barTintColor: .blue, tintColor: .white, whenDidClose: { doSomething() })
+    
+    WebView.safari.present(url: URL, from previousViewController: UIViewController)
+    
+    WebView.safari.present(url: URL,
+                           from previousViewController: UIViewController,
+                           whenDidClose didClose: (() -> Void)?)
+    
+    WebView.safari.present(url: URL,
+                           from previousViewController: UIViewController,
+                           dismissButtonStyle: DismissButtonStyle,
+                           whenDidClose didClose: (() -> Void)?)
+    
+    WebView.safari.present(url: URL,
+                           from previousViewController: UIViewController,
+                           dismissButtonStyle: DismissButtonStyle,
+                           barTintColor: UIColor?,
+                           tintColor: UIColor?,
+                           whenDidClose didClose: (() -> Void)?)
+    
+    WebView.safari.present(url: URL,
+                           from previousViewController: UIViewController,
+                           dismissButtonStyle: DismissButtonStyle,
+                           presentModally: Bool,
+                           barCollapsingEnabled: Bool,
+                           entersReaderIfAvailable: Bool,
+                           barTintColor: UIColor?,
+                           tintColor: UIColor?,
+                           whenDidClose didClose: (() -> Void)?)
 ```
 
 Where:
@@ -98,21 +111,38 @@ self.present(vc, animated: true, completion: nil)
 Or you can present it directly from your ViewController
 
 ```swift
-WebView.wkWebView.present(url: url, from: self)
-
-WebView.wkWebView.present(url: url, from: self, whenDidClose: { doSomething() })
-
-WebView.wkWebView.present(url: url, from: self, whenDidClose: { doSomething() })
-
-WebView.wkWebView.present(url: url, from: self, closeButtonName: "Close", buttonSide: .left, 
-                  barTintColor: .blue, tintColor: .white, whenDidClose: { doSomething() })
-                 
-WebView.wkWebView.present(url: url, from: self, closeButtonName: "Close", buttonSide: .left,
-                  barTintColor: .blue, tintColor: .white, title: "My Screen", whenDidClose: { doSomething() })
-                 
-WebView.wkWebView.present(url: url, from: self, closeButtonName: "Close", buttonSide: .left,
-                  barTintColor: .blue, tintColor: .white, title: "My Screen", 
-                  userAgent: userAgent, whenDidClose: { doSomething() })
+    WebView.wkWebView.present(url: URL, from previousViewController: UIViewController)
+    
+    WebView.wkWebView.present(url: URL,
+                             from previousViewController: UIViewController,
+                             whenDidClose didClose: (() -> Void)?)
+    
+    WebView.wkWebView.present(url: URL,
+                             from previousViewController: UIViewController,
+                             closeButtonName: String?,
+                             buttonSide: ButtonSide,
+                             barTintColor: UIColor?,
+                             tintColor: UIColor?,
+                             whenDidClose didClose: (() -> Void)?)
+    
+    WebView.wkWebView.present(url: URL,
+                             from previousViewController: UIViewController,
+                             closeButtonName: String?,
+                             buttonSide: ButtonSide,
+                             barTintColor: UIColor?,
+                             tintColor: UIColor?,
+                             title: String?,
+                             whenDidClose didClose: (() -> Void)?)
+    
+    WebView.wkWebView.present(url: URL,
+                             from previousViewController: UIViewController,
+                             closeButtonName: String?,
+                             buttonSide: ButtonSide,
+                             barTintColor: UIColor?,
+                             tintColor: UIColor?,
+                             title: String?,
+                             userAgent: String,
+                             whenDidClose didClose: (() -> Void)?)
 ```
 
 Where:
@@ -126,18 +156,6 @@ Where:
 * __title__ - Set a title for NavigationBar.
 * __userAgent__ - Append a UserAgent to your WebView.
 * __whenDidClose__ - A method used as a callback when the user closes the Browser.
-
-
-#### Framework
-
-Clone this project, copy CSafariWebKit.framework to your project. Then and go to Xcode and follow these steps.
-
-1. Select the project file from the project navigator on the left side of the project window.
-2. Select the target for where you want to add frameworks in the project settings editor.
-3. Select the “Build Phases” tab, and click the small triangle next to “Link Binary With Libraries” to view all of the frameworks in your application.
-4. To Add frameworks, click the “+” below the list of frameworks.
-
-![](http://docs.onemobilesdk.aol.com/ios-ad-sdk/adding-frameworks.png)
 
 ## Built With
 
