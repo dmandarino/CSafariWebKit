@@ -60,7 +60,7 @@ class WKWebViewRouter: RouterProtocol {
     private func presentRightButton() {
         WebView.wkWebView.present(url: url,
                                   from: viewController,
-                                  closeButtonName: "Close",
+                                  closeButtonName: nil,
                                   buttonSide: .right,
                                   barTintColor: nil,
                                   tintColor: nil,
@@ -70,7 +70,7 @@ class WKWebViewRouter: RouterProtocol {
     private func presentCustomColor() {
         WebView.wkWebView.present(url: url,
                                   from: viewController,
-                                  closeButtonName: "Close",
+                                  closeButtonName: nil,
                                   buttonSide: .left,
                                   barTintColor: .red,
                                   tintColor: .black,
@@ -80,7 +80,7 @@ class WKWebViewRouter: RouterProtocol {
     private func presentCustomTitle() {
         WebView.wkWebView.present(url: url,
                                   from: viewController,
-                                  closeButtonName: "Close",
+                                  closeButtonName: nil,
                                   buttonSide: .left,
                                   barTintColor: nil,
                                   tintColor: nil,
