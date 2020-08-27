@@ -9,15 +9,10 @@
 import UIKit
 import CSafariWebKit
 
-protocol SafariOptionsProtocol {
-    func getComponents() -> [ItemMenu]
-}
-
-final class SafariRouter: SafariOptionsProtocol {
+final class SafariRouter: RouterProtocol {
     
-    private var viewController: UIViewController
-    private var components: [ItemMenu] = []
-    private let url = URL(string: "https://github.com/dmandarino/CSafariWebKit")!
+    var components: [ItemMenu] = []
+    var viewController: UIViewController
     
     init(viewController: UIViewController) {
         self.viewController = viewController
@@ -47,23 +42,28 @@ final class SafariRouter: SafariOptionsProtocol {
     }
     
     private func presentDidClose() {
-        WebView.safari.present(url: url, from: viewController, whenDidClose: whenDidClose)
-    }
-    
-    private func presentCloseButton() {
-        WebView.safari.present(url: url, from: viewController,
-                               dismissButtonStyle: .close,
+        WebView.safari.present(url: url,
+                               from: viewController,
                                whenDidClose: whenDidClose)
     }
     
+    private func presentCloseButton() {
+        WebView.safari.present(url: url,
+                               from: viewController,
+                               dismissButtonStyle: .close,
+                               whenDidClose: nil)
+    }
+    
     private func presentCancelButton() {
-        WebView.safari.present(url: url, from: viewController,
+        WebView.safari.present(url: url,
+                               from: viewController,
                                dismissButtonStyle: .done,
                                whenDidClose: nil)
     }
     
     private func presentBarTintColor() {
-        WebView.safari.present(url: url, from: viewController,
+        WebView.safari.present(url: url,
+                               from: viewController,
                                dismissButtonStyle: .done,
                                barTintColor: .red,
                                tintColor: .black,
@@ -71,7 +71,8 @@ final class SafariRouter: SafariOptionsProtocol {
     }
     
     private func presentModally() {
-        WebView.safari.present(url: url, from: viewController,
+        WebView.safari.present(url: url,
+                               from: viewController,
                                dismissButtonStyle: .done,
                                presentModally: true,
                                barCollapsingEnabled: true,
@@ -82,7 +83,8 @@ final class SafariRouter: SafariOptionsProtocol {
     }
     
     private func presentEnterReader() {
-        WebView.safari.present(url: url, from: viewController,
+        WebView.safari.present(url: url,
+                               from: viewController,
                                dismissButtonStyle: .done,
                                presentModally: false,
                                barCollapsingEnabled: false,
@@ -93,7 +95,8 @@ final class SafariRouter: SafariOptionsProtocol {
     }
     
     private func presentBarCollapsing() {
-        WebView.safari.present(url: url, from: viewController,
+        WebView.safari.present(url: url,
+                               from: viewController,
                                dismissButtonStyle: .done,
                                presentModally: false,
                                barCollapsingEnabled: true,
@@ -102,22 +105,4 @@ final class SafariRouter: SafariOptionsProtocol {
                                tintColor: nil,
                                whenDidClose: nil)
     }
-    
-    private func whenDidClose() {
-        print("DID CLOSE!")
-        let action = UIAlertAction(title: "Close", style: .default, handler: nil)
-        let alert = UIAlertController(title: "Did Close", message: nil, preferredStyle: .alert)
-        alert.addAction(action)
-        viewController.present(alert, animated: true, completion: nil)
-    }
-
-//    func present(url: URL,
-//                 from previousViewController: UIViewController,
-//                 dismissButtonStyle: DismissButtonStyle,
-//                 presentModally: Bool,
-//                 barCollapsingEnabled: Bool,
-//                 entersReaderIfAvailable: Bool,
-//                 barTintColor: UIColor?,
-//                 tintColor: UIColor?,
-//                 whenDidClose didClose: (() -> Void)?)
 }

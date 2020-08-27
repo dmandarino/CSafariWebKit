@@ -94,6 +94,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Uyx-98-aXp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wqu-F3-6vu">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.0" green="0.7356386788" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -111,7 +112,7 @@
         <!--WKWebView-->
         <scene sceneID="G6A-My-RHo">
             <objects>
-                <viewController id="ALr-do-6lI" sceneMemberID="viewController">
+                <viewController id="ALr-do-6lI" customClass="WKWebViewController" customModule="CSafariWebKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JC1-eB-rLw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,6 +136,9 @@
                         <viewLayoutGuide key="safeArea" id="hw6-y8-r0o"/>
                     </view>
                     <navigationItem key="navigationItem" title="WKWebView" id="OHg-Cv-JB3"/>
+                    <connections>
+                        <outlet property="tableView" destination="l7O-6B-BlG" id="uNV-mO-67j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CcE-qK-7aO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

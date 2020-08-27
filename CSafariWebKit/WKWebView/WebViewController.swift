@@ -130,9 +130,13 @@ extension WebViewController: WebViewControllerProtocol {
                                            barTintColor: UIColor?,
                                            tintColor: UIColor?,
                                            title: String?) {
+        let navBar = previousViewController.navigationController?.navigationBar
+        let colorKey = NSAttributedString.Key.foregroundColor
+        let previousTintColor = navBar?.titleTextAttributes?[colorKey] as? UIColor
+        
         navController = UINavigationController(rootViewController: self)
-        navController.navigationBar.barTintColor = barTintColor ?? previousViewController.navigationController?.navigationBar.barTintColor
-        navController.navigationBar.tintColor = tintColor ?? previousViewController.navigationController?.navigationBar.tintColor
+        navController.navigationBar.barTintColor = barTintColor ?? navBar?.barTintColor
+        navController.navigationBar.tintColor = tintColor ?? previousTintColor
         navController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: tintColor ?? .black]
         navController.navigationBar.topItem?.title = title
     }
